@@ -1,0 +1,331 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Suivi Prospection Paris</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --navy: #1155CC; --navy-dark: #0A3A8A;
+  --bg: #CFE2FF; --bg-row: #E8F0FE; --bg-alt: #D2E3FC;
+  --surface: #FFFFFF; --text: #1C2B4A; --muted: #5F6B7A;
+  --border: #A8C0E8; --border-h: #7BAEE4;
+  --s-p2-bg: #34A853; --s-p2-t: #fff;
+  --s-p3-bg: #4285F4; --s-p3-t: #fff;
+  --s-ae-bg: #9AA0A6; --s-ae-t: #fff;
+  --s-fait-bg: #0F9D58; --s-fait-t: #fff;
+  --sig-fort: #EA4335; --sig-mf: #FA7B17;
+  --sig-m: #D89F00; --sig-f: #1E8E3E; --sig-n: #9AA0A6;
+  --edit-bg: rgba(255,255,180,0.18); --edit-focus: rgba(255,255,180,0.45);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --navy:#4A90D9;--navy-dark:#1A3A6A;--bg:#0D1B2E;--bg-row:#111C30;--bg-alt:#162340;
+  --surface:#0D1B2E;--text:#C8D8EE;--muted:#7A8FA8;--border:#1E3050;--border-h:#2A4A78;
+  --edit-bg:rgba(255,255,120,0.06);--edit-focus:rgba(255,255,120,0.14);
+}}
+:root[data-theme="dark"] {
+  --navy:#4A90D9;--navy-dark:#1A3A6A;--bg:#0D1B2E;--bg-row:#111C30;--bg-alt:#162340;
+  --surface:#0D1B2E;--text:#C8D8EE;--muted:#7A8FA8;--border:#1E3050;--border-h:#2A4A78;
+  --edit-bg:rgba(255,255,120,0.06);--edit-focus:rgba(255,255,120,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:12px;min-height:100vh}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--navy-dark);color:#fff;
+  display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:48px;gap:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.3);flex-wrap:wrap}
+.topbar-title{font-weight:700;font-size:13px}
+.topbar-sub{font-size:10px;opacity:.6}
+.topbar-stats{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tstat{font-size:11px;font-weight:600;padding:2px 9px;border-radius:12px;font-variant-numeric:tabular-nums}
+.ts-p2{background:rgba(52,168,83,.25);color:#81C995}
+.ts-p3{background:rgba(66,133,244,.25);color:#8AB4F8}
+.ts-ae{background:rgba(255,255,255,.08);color:rgba(255,255,255,.55)}
+.filter-bar{display:flex;gap:6px;padding:10px 16px;flex-wrap:wrap;background:var(--bg);
+  border-bottom:1px solid var(--border);position:sticky;top:48px;z-index:90}
+.fb{appearance:none;border:1.5px solid var(--border-h);border-radius:4px;background:var(--surface);
+  color:var(--muted);font-size:11px;font-weight:600;padding:3px 10px;cursor:pointer;
+  font-family:inherit;transition:all .1s}
+.fb:hover{background:var(--bg-alt);color:var(--text)}
+.fb.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.legend-bar{display:flex;gap:16px;align-items:center;padding:6px 16px;flex-wrap:wrap;
+  background:var(--bg);border-bottom:1px solid var(--border);font-size:10px;color:var(--muted)}
+.leg-item{display:flex;align-items:center;gap:4px}
+.leg-dot{width:8px;height:8px;border-radius:50%}
+.table-wrap{overflow-x:auto;padding:0 0 32px 0}
+table{width:100%;border-collapse:collapse;min-width:1400px;background:var(--surface)}
+thead tr{background:var(--navy);color:#fff}
+thead th{padding:8px 10px;font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;text-align:left;white-space:nowrap;
+  border-right:1px solid rgba(255,255,255,.12);
+  position:sticky;top:calc(48px + 45px + 29px);z-index:80;background:var(--navy);
+  vertical-align:bottom;line-height:1.3}
+thead th:last-child{border-right:none}
+thead th.editable-col{background:#0A3A8A;border-bottom:3px solid #FDD835}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(odd){background:var(--bg-row)}
+tbody tr:nth-child(even){background:var(--bg-alt)}
+tbody tr:hover{background:rgba(66,133,244,.08)}
+tbody td{padding:8px 10px;vertical-align:top;border-right:1px solid var(--border);font-size:11.5px;line-height:1.5}
+tbody td:last-child{border-right:none}
+td.editable-col{background:var(--edit-bg)!important}
+.day-sep td{background:var(--navy-dark)!important;color:#fff;font-weight:700;font-size:11px;
+  letter-spacing:.05em;text-transform:uppercase;padding:5px 12px}
+.status-pill{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:3px;white-space:nowrap;letter-spacing:.04em;
+  cursor:pointer;transition:filter .1s;user-select:none}
+.s-p2{background:var(--s-p2-bg);color:var(--s-p2-t)}
+.s-p3{background:var(--s-p3-bg);color:var(--s-p3-t)}
+.s-ae{background:var(--s-ae-bg);color:var(--s-ae-t)}
+.s-fait{background:var(--s-fait-bg);color:var(--s-fait-t)}
+.status-pill:hover{filter:brightness(1.1)}
+.note-cell{font-size:11px;color:var(--muted);background:transparent;border:none;outline:none;
+  font-family:inherit;width:100%;resize:none;min-height:32px;cursor:text;line-height:1.5}
+.note-cell:focus{color:var(--text);background:var(--edit-focus);border-radius:3px;padding:2px 4px;margin:-2px -4px}
+.note-cell::placeholder{opacity:.4;font-style:italic}
+.edit-label{font-size:9px;font-weight:700;color:var(--navy);text-transform:uppercase;
+  letter-spacing:.06em;margin-bottom:3px;display:block;opacity:.7}
+.contacts-list{display:flex;flex-direction:column;gap:4px}
+.contact-item{display:flex;flex-direction:column;border-left:2px solid var(--border-h);padding-left:6px;font-size:11px}
+.contact-item.terminé{border-left-color:#34A853}
+.contact-name{font-weight:600}
+.contact-fn{color:var(--muted);font-size:10.5px}
+.contact-mob{font-family:monospace;font-size:10.5px;color:var(--navy)}
+.contact-mob a{color:inherit;text-decoration:none}
+.contact-mob.miss{color:var(--muted);font-family:inherit}
+.lb-t{display:inline-flex;align-items:center;font-size:9px;font-weight:700;
+  padding:0 5px;border-radius:2px;background:#D2E3FC;color:#1A5FA8;margin-left:4px}
+.sig{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px}
+.sig-fort{color:var(--sig-fort)}.sig-moyenfort{color:var(--sig-mf)}
+.sig-moyen{color:var(--sig-m)}.sig-faible{color:var(--sig-f)}.sig-nul{color:var(--sig-n)}
+.sig-keywords{display:flex;flex-wrap:wrap;gap:3px;margin-top:5px}
+.kw{font-size:9.5px;padding:1px 6px;border-radius:10px;font-weight:600;
+  background:rgba(234,67,53,.1);color:#C62828;border:1px solid rgba(234,67,53,.25)}
+.kw.kw-orange{background:rgba(250,123,23,.1);color:#E65100;border-color:rgba(250,123,23,.25)}
+.kw.kw-yellow{background:rgba(248,180,0,.1);color:#795B00;border-color:rgba(248,180,0,.25)}
+.kw.kw-green{background:rgba(30,142,62,.1);color:#1B5E20;border-color:rgba(30,142,62,.2)}
+.kw.kw-grey{background:rgba(154,160,166,.1);color:var(--muted);border-color:var(--border)}
+.ta-pos{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+.score-bar{display:flex;align-items:center;gap:5px;margin-top:3px}
+.score-num{font-size:11px;font-weight:700;min-width:28px;color:var(--text)}
+.bar-bg{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;transition:width .3s}
+.ta-note{font-weight:700;font-size:12px}
+.ta-stars{color:#F4B400;font-size:10px}
+.ta-avis{font-size:10px;color:var(--muted)}
+.checkbox-col{width:32px!important;text-align:center!important;padding:0!important}
+.checkbox-wrapper{display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;user-select:none}
+.checkbox-wrapper.checked{color:#34A853;font-weight:700}
+.checkbox-icon{font-size:18px;line-height:1}
+tr[data-hidden]{display:none}
+/* CONFIG BANNER */
+.config-banner{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin:10px 16px;font-size:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.config-banner input{padding:4px 8px;border:1px solid #ccc;border-radius:4px;font-size:12px;width:280px}
+.privacy-note{padding:8px 16px;background:#fff3cd;color:#563f00;font-size:11px}
+@media print{.topbar,.filter-bar,.legend-bar{position:relative};body{background:#fff}}
+</style>
+
+<div class="topbar">
+  <div>
+    <div class="topbar-title">Suivi Prospection Terrain — Paris 7e · 6e · 15e</div>
+    <div class="topbar-sub">Pierre Maïsetti · EquipHotel 2–5 nov 2026 · 21 hôtels · www.retouch-up.fr</div>
+  </div>
+  <div class="topbar-stats">
+    <span class="tstat ts-p2">P2 : 2</span>
+    <span class="tstat ts-p3">P3 : 13</span>
+    <span class="tstat ts-ae">À écarter : 6</span>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="fb active" data-f="all">Tous (21)</button>
+  <button class="fb" data-f="P2">P2 — Priorité (2)</button>
+  <button class="fb" data-f="P3">P3 — À visiter (13)</button>
+  <button class="fb" data-f="Ae">À écarter (6)</button>
+  <button class="fb" data-f="lemlist">✉ Lemlist (7)</button>
+  <button class="fb" data-f="j1">Jour 1 — 31 oct</button>
+  <button class="fb" data-f="j2">Jour 2 — 3 nov</button>
+</div>
+
+<p class="privacy-note">Les coches et notes restent sur cet appareil. Elles ne se synchronisent pas entre personnes. Numéros mobiles non publiés.</p>
+<div class="legend-bar">
+  <span style="font-weight:700;color:var(--text)">Colonnes éditables par Pierre ✏️ :</span>
+  <span class="leg-item"><span class="leg-dot" style="background:#FDD835;opacity:.8"></span> Fond jaune = zone à remplir</span>
+  <span class="leg-item">Statut = clic pour changer (P3 → P2 → FAIT…)</span>
+  <span style="margin-left:auto;font-weight:600;color:#C62820">🔴 Fort</span>
+  <span style="color:var(--sig-mf)">🟠 Moyen-fort</span>
+  <span style="color:var(--sig-m)">🟡 Moyen</span>
+  <span style="color:var(--sig-f)">🟢 Faible</span>
+  <span style="color:var(--sig-n)">⚪ Nul</span>
+</div>
+
+<div class="table-wrap">
+<table id="main-table">
+<thead>
+  <tr>
+    <th style="width:32px;text-align:center">✓</th>
+    <th style="width:72px">Priorité</th>
+    <th style="width:130px">Établissement</th>
+    <th style="width:50px">Arr.</th>
+    <th style="width:160px">Contact principal</th>
+    <th style="width:190px">Tous contacts sur place</th>
+    <th style="width:80px">TA<br>Note/Avis</th>
+    <th style="width:185px">Signaux Retouch'up ↗<br><span style="font-weight:400;font-size:9px;opacity:.75">Retours TA récurrents — surfaces &amp; maintenance</span></th>
+    <th style="width:55px">Score</th>
+    <th style="width:60px">Date</th>
+    <th class="editable-col" style="width:160px">✏️ Angle d'attaque<br><span style="font-weight:400;font-size:9px">Pierre peut modifier avant visite</span></th>
+    <th class="editable-col" style="width:170px">✏️ Résultat de visite<br><span style="font-weight:400;font-size:9px">À remplir après le passage</span></th>
+    <th class="editable-col" style="width:120px">✏️ Prochaine étape<br><span style="font-weight:400;font-size:9px">RDV / rappel / relance</span></th>
+  </tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+<script>
+function hubspotUrl(id){return `https://app.hubspot.com/contacts/19495777/record/0-1/${id}`;}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c]);}
+const HOTELS = [
+  {jour:"j1",date:"31/10/2026",arr:"15e",nom:"Europe Hotel Paris Eiffel",groupe:"Indépendant",phone:"01 47 34 07 44",score:37,prio:"Ae",taNote:4.2,taAvis:897,sig:"faible",kwRU:[{txt:"SdB étroite",c:"yellow"},{txt:"chambre compacte",c:"yellow"}],taNeg:"Chambres petites, SdB étroite, isolation phonique",taPos:"Emplacement central, personnel accueillant, propreté",icebreaker:"Rapport qualité/prix reconnu — signaux chambres compactes",contacts:[{nom:"Mouloud Arhab",fn:"Direction",mobile:"—",terminé:false,hsId:"244937598377"}]},
+  {jour:"j1",date:"31/10/2026",arr:"15e",nom:"Hotel Eiffel Blomet",groupe:"Indépendant",phone:"01 53 68 70 00",score:50,prio:"P3",taNote:4.7,taAvis:1399,sig:"nul",kwRU:[{txt:"Très bien entretenu",c:"grey"},{txt:"Peu de signaux",c:"grey"}],taNeg:"Quelques commentaires sur la taille des chambres",taPos:"Déco soignée, propreté, accueil chaleureux",icebreaker:"2 contacts Lemlist envoyés — relance en connaissance",contacts:[{nom:"Carolina Moiseev",fn:"Direction",mobile:"—",terminé:true,hsId:"201682489674"},{nom:"Roxane De Wulf",fn:"Direction",mobile:"—",terminé:true,hsId:"244941321001"}]},
+  {jour:"j1",date:"31/10/2026",arr:"15e",nom:"Hôtel Moderniste",groupe:"Indépendant",phone:"01 48 28 56 95",score:34,prio:"Ae",taNote:5.0,taAvis:446,sig:"nul",kwRU:[{txt:"Hôtel neuf",c:"grey"},{txt:"Aucun signal surface",c:"grey"}],taNeg:"Aucun signal négatif notable",taPos:"Très récent, déco moderne, note parfaite",icebreaker:"Ouverture récente — anticiper entretien préventif surfaces à moyen terme",contacts:[{nom:"Bertrand Mignard",fn:"Direction",mobile:"—",terminé:false,hsId:"244951933109"},{nom:"Lucie Morenvillez",fn:"Direction",mobile:"—",terminé:false,hsId:"244952076310"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Hôtel Ares Eiffel",groupe:"Indépendant",phone:"01 47 34 74 04",score:44,prio:"P3",taNote:4.7,taAvis:2973,sig:"moyen",kwRU:[{txt:"AC cassé récurrent",c:"orange"},{txt:"Décor vieillissant",c:"yellow"},{txt:"Plomberie",c:"orange"},{txt:"Moquette usée",c:"yellow"}],taNeg:"AC défaillant plusieurs fois, décor daté, quelques problèmes de plomberie",taPos:"Très bon emplacement, personnel sympa, rapport qualité/prix",icebreaker:"Direction répond aux avis TA — AC et décor cités. Angle : rénovation surface sans fermeture.",contacts:[{nom:"David Protassieff",fn:"Direction",mobile:"—",terminé:false,hsId:"244926214022"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"The Ascott — Citadines Tour Eiffel",groupe:"The Ascott Limited",phone:"01 53 95 60 00",score:64,prio:"P2",taNote:4.1,taAvis:512,sig:"fort",kwRU:[{txt:"AC défaillant (×5+)",c:"red"},{txt:"Plomberie hors service",c:"red"},{txt:"Couloirs délabrés",c:"red"},{txt:"Bâtiment tremble",c:"red"},{txt:"Structure vieillissante",c:"red"}],taNeg:"AC en panne répété, plomberie défaillante, couloirs en mauvais état, bâtiment vieillissant, bruits",taPos:"Emplacement Tour Eiffel, appartements spacieux, vue",icebreaker:"PRIORITÉ MAX — Direction reconnaît pb sans solution. Cas urgent. Groupe international Ascott.",contacts:[{nom:"Nabil Abdelhedi",fn:"Direction Asie",mobile:"—",terminé:true,hsId:"248048522127"},{nom:"Quentin Malaboeuf",fn:"Direction",mobile:"—",terminé:false,hsId:""},{nom:"Seif Eddine Lanouar",fn:"Direction",mobile:"—",terminé:false,hsId:""},{nom:"Adrien Sardin",fn:"Direction",mobile:"—",terminé:false,hsId:"247937070415"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Malone Hotels — Relais Bosquet",groupe:"Malone Hotels",phone:"01 47 05 25 45",score:51,prio:"P3",taNote:4.7,taAvis:3932,sig:"moyen",kwRU:[{txt:"Volets cassés",c:"yellow"},{txt:"Drainage lent",c:"yellow"},{txt:"Équipements à moderniser",c:"yellow"}],taNeg:"Volets défaillants, drainage lent dans certaines SdB, quelques équipements datés",taPos:"Accueil exceptionnel, CEO très impliqué, literie premium",icebreaker:"CEO répond aux avis TA en personne. Contacter Damien Desenclos (Dir. Travaux).",contacts:[{nom:"Renaud Hébert",fn:"Direction",mobile:"—",terminé:false,hsId:"244937689243"},{nom:"Yohann Benhamou",fn:"Direction",mobile:"—",terminé:false,hsId:"244942049069"},{nom:"Damien Desenclos",fn:"Dir. Travaux & Maintenance",mobile:"—",terminé:false,hsId:"247125966495"},{nom:"Laurie Jacquin",fn:"Resp. adj. Technique",mobile:"—",terminé:false,hsId:""}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Collection Vesper — Hôtel du Cadran",groupe:"Collection Vesper",phone:"01 40 62 67 00",score:40,prio:"P3",taNote:4.7,taAvis:866,sig:"faible",kwRU:[{txt:"Coupures électricité",c:"yellow"},{txt:"Quelques finitions",c:"yellow"}],taNeg:"Coupures électriques ponctuelles, quelques finitions à revoir",taPos:"Boutique hôtel chic, déco soignée, literie excellente",icebreaker:"Hôtel haut de gamme — préserver le standing sans immobiliser les chambres.",contacts:[{nom:"Julien Delorme",fn:"Direction",mobile:"—",terminé:false,hsId:"247164959598"},{nom:"Ian Decaix",fn:"Direction",mobile:"—",terminé:false,hsId:"223886690864"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Hôtel des Grands Voyageurs",groupe:"Indépendant",phone:"01 49 54 87 00",score:39,prio:"Ae",taNote:4.8,taAvis:415,sig:"nul",kwRU:[{txt:"Très bien entretenu",c:"grey"},{txt:"Peu d'opportunité",c:"grey"}],taNeg:"Quasi aucun signal négatif",taPos:"Note excellente, propreté irréprochable, service",icebreaker:"Note excellente — prise de contact pour futur entretien préventif.",contacts:[{nom:"Delphine Bao",fn:"Direction",mobile:"—",terminé:false,hsId:"244926280776"},{nom:"Anouar Bakir",fn:"Direction",mobile:"—",terminé:false,hsId:"136532871458"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Inwood Hotels — Le Tourville",groupe:"Inwood Hotels",phone:"01 47 05 62 62",score:53,prio:"P3",taNote:4.7,taAvis:1083,sig:"nul",kwRU:[{txt:"Bon état général",c:"grey"},{txt:"Groupe rigoureux",c:"green"}],taNeg:"Très peu de signaux négatifs",taPos:"Hôtel charmant, personnel aux petits soins, déco classique soignée",icebreaker:"1 contact Lemlist (Catherine Duvot-Cohen). Groupe 3 hôtels Paris — valeur compte.",contacts:[{nom:"Catherine Duvot-Cohen",fn:"Direction groupe",mobile:"—",terminé:true,hsId:"244943097235"},{nom:"Yann Protois",fn:"Direction",mobile:"—",terminé:false,hsId:"111196883762"},{nom:"Olivier Romain",fn:"Direction",mobile:"—",terminé:false,hsId:"114231184469"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Hôtel Eiffel Turenne",groupe:"Indépendant",phone:"01 47 05 99 92",score:43,prio:"P3",taNote:4.7,taAvis:2217,sig:"faible",kwRU:[{txt:"Sèche-cheveux scotché ×3",c:"yellow"},{txt:"Débris trouvés",c:"yellow"},{txt:"Petits défauts récurrents",c:"yellow"}],taNeg:"Sèche-cheveux scotché cité 3 fois, débris dans une chambre, petits défauts de finition",taPos:"Bon rapport qualité/prix, emplacement pratique, accueil agréable",icebreaker:"Petits défauts récurrents = budget maintenance réactif. Angle : qualité perçue.",contacts:[{nom:"Maria Xanthopoulou",fn:"Direction",mobile:"—",terminé:false,hsId:"244988310402"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Hôtel La Comtesse",groupe:"Indépendant",phone:"01 45 51 29 29",score:38,prio:"Ae",taNote:4.7,taAvis:1023,sig:"faible",kwRU:[{txt:"Isolation phonique",c:"yellow"},{txt:"Signal unique",c:"grey"}],taNeg:"Isolation phonique insuffisante mentionnée",taPos:"Hôtel très propre, personnel attentionné, bon standing",icebreaker:"Signaux faibles uniquement — passage rapide, laisser carte.",contacts:[{nom:"Daniel Judkiewicz",fn:"Direction",mobile:"—",terminé:false,hsId:"244991593581"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Hôtel Muguet",groupe:"Indépendant",phone:"01 47 05 05 93",score:44,prio:"P3",taNote:4.6,taAvis:2493,sig:"faible",kwRU:[{txt:"Fauteuils à retapisser",c:"orange"},{txt:"Cheminée hors service",c:"yellow"},{txt:"Mobilier vieillissant",c:"yellow"}],taNeg:"Fauteuils usés à retapisser, cheminée décorative hors service, mobilier un peu daté",taPos:"Jardin intérieur charmant, calme, très propre",icebreaker:"Charline Pelletier contactée Lemlist. Mobilier vieillissant — angle rénov. surfaces.",contacts:[{nom:"Charline Pelletier",fn:"Direction",mobile:"—",terminé:true,hsId:"244942790193"}]},
+  {jour:"j1",date:"31/10/2026",arr:"7e",nom:"Le Cinq Codet",groupe:"Indépendant",phone:"01 53 85 15 61",score:47,prio:"P3",taNote:4.6,taAvis:1179,sig:"moyenfort",kwRU:[{txt:"Ch. 309 rénovation urgente",c:"red"},{txt:"Ventilation reconnue défaillante",c:"orange"},{txt:"Chambre immobilisée",c:"orange"}],taNeg:"Chambre 309 citée plusieurs fois comme nécessitant rénovation urgente, ventilation problématique",taPos:"Design contemporain, bon service, restaurant apprécié",icebreaker:"Direction a reconnu le pb ventilation publiquement. Chambre immobilisée = coût direct.",contacts:[{nom:"Caroline Demon",fn:"Direction",mobile:"—",terminé:false,hsId:"200567839068"},{nom:"Mohamed Bourahte",fn:"Maintenance",mobile:"—",terminé:false,hsId:"125382828559"}]},
+  {jour:"j2",date:"03/11/2026",arr:"7e",nom:"Hôtel Montalembert by B Signature",groupe:"B Signature Hotels",phone:"01 45 49 68 68",score:45,prio:"P3",taNote:4.6,taAvis:1493,sig:"faible",kwRU:[{txt:"Drainage WC bruyant",c:"yellow"},{txt:"Chambres 16m²",c:"yellow"},{txt:"Quelques équipements datés",c:"yellow"}],taNeg:"Drainage WC bruyant, chambres compactes (16m²), quelques équipements à revoir",taPos:"Adresse chic Saint-Germain, service attentionné, très bon emplacement",icebreaker:"Groupe B Signature (Bel Ami aussi). Double opportunité — 2 adresses en un RDV.",contacts:[{nom:"Antoine Roussel",fn:"Direction",mobile:"—",terminé:false,hsId:""}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Mandarin Oriental Lutetia",groupe:"Mandarin Oriental",phone:"01 49 54 46 00",score:60,prio:"P2",taNote:4.7,taAvis:739,sig:"nul",kwRU:[{txt:"Palace 5★ entretenu",c:"green"},{txt:"Rénové 2018",c:"green"},{txt:"Standards d'excellence",c:"green"}],taNeg:"Très peu — palace rigoureux, entretien haut de gamme",taPos:"Palace iconique, service légendaire, rénovation récente 2018, gastronomie",icebreaker:"2 contacts Lemlist (Eric Gervy + Julie Rolland). Palace 5★ — valeur stratégique groupe.",contacts:[{nom:"Eric Gervy",fn:"Direction",mobile:"—",terminé:true,hsId:"244931904589"},{nom:"Lynn Wickremaratne",fn:"Direction",mobile:"—",terminé:false,hsId:""},{nom:"Julie Rolland",fn:"Direction",mobile:"—",terminé:true,hsId:"244940520249"},{nom:"Julien Bardet",fn:"Direction",mobile:"—",terminé:false,hsId:"244939812161"},{nom:"Isabelle Taboury",fn:"Direction",mobile:"—",terminé:false,hsId:"244900823219"},{nom:"Frantz Perthuisot",fn:"Adj. Technique",mobile:"—",terminé:false,hsId:""}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Hôtel Louison",groupe:"Indépendant",phone:"01 53 63 25 50",score:37,prio:"Ae",taNote:4.5,taAvis:1435,sig:"nul",kwRU:[{txt:"Bon état général",c:"grey"},{txt:"Peu de signaux",c:"grey"}],taNeg:"Quelques commentaires sur déco un peu datée",taPos:"Hôtel charmant, bon emplacement, service apprécié",icebreaker:"Passage rapide — laisser brochure à Anaïs Bourguet-Buffet (Dir.).",contacts:[{nom:"Anaïs Bourguet-Buffet",fn:"Direction",mobile:"—",terminé:false,hsId:"114233636205"},{nom:"Marie Ange Corbel",fn:"Gérante / DG",mobile:"—",terminé:false,hsId:"244951773478"}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Hôtel Le Six",groupe:"Indépendant",phone:"01 42 22 00 75",score:39,prio:"Ae",taNote:4.8,taAvis:2801,sig:"nul",kwRU:[{txt:"Récemment redécoré",c:"green"},{txt:"Aucun signal surface",c:"grey"}],taNeg:"Aucun signal notable — hôtel récemment redécoré",taPos:"Déco contemporaine soignée, très bien noté, personnel",icebreaker:"Redécoré récemment — entretien préventif sur le long terme. Angle futur.",contacts:[{nom:"Pauline Larrouy",fn:"Direction",mobile:"—",terminé:false,hsId:"244950490136"},{nom:"Hugo Fougères",fn:"Direction",mobile:"—",terminé:false,hsId:"244952265548"}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Hôtel Bel Ami by B Signature",groupe:"B Signature Hotels",phone:"01 42 61 53 53",score:52,prio:"P3",taNote:4.6,taAvis:2366,sig:"moyenfort",kwRU:[{txt:"Bois plaqué décollé (×4)",c:"red"},{txt:"Bureau/armoire endommagés",c:"orange"},{txt:"Hôtel «daté»",c:"orange"},{txt:"Mobilier à rénover",c:"orange"}],taNeg:"Bois plaqué décollé sur bureau et armoire cité 4 fois, hôtel décrit comme «daté», moquette usée",taPos:"DG répond personnellement, emplacement Saint-Germain, service apprécié",icebreaker:"DG répond aux avis TA. Mobilier dégradé cité = opportunité directe. Groupe B Signature.",contacts:[{nom:"Laurence Guinebretiere",fn:"Direction",mobile:"—",terminé:false,hsId:"244927007830"},{nom:"Ibrahima Niane",fn:"Maintenance",mobile:"—",terminé:false,hsId:"200597102136"}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Hôtel Madison",groupe:"Indépendant",phone:"01 40 51 60 00",score:41,prio:"P3",taNote:4.7,taAvis:1564,sig:"faible",kwRU:[{txt:"Rénovation partielle (certaines ch.)",c:"orange"},{txt:"Ch. non rénovées encore",c:"yellow"}],taNeg:"Certaines chambres décrites comme «en attente de rénovation», inégalité entre chambres",taPos:"Vue Notre-Dame, emplacement exceptionnel, bonne literie",icebreaker:"Rénovation partielle confirmée — chambres en attente. Créneau clair.",contacts:[{nom:"Bruno Alleau",fn:"Direction",mobile:"—",terminé:false,hsId:"114202623056"},{nom:"Aïssata Mbengue",fn:"Direction",mobile:"—",terminé:false,hsId:"200567655936"}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Hôtel Dame des Arts",groupe:"Indépendant",phone:"01 81 69 00 60",score:51,prio:"P3",taNote:4.7,taAvis:681,sig:"moyenfort",kwRU:[{txt:"Portes douche bougent/fuient",c:"orange"},{txt:"Peinture s'écaille",c:"orange"},{txt:"Rayures sur surfaces",c:"orange"},{txt:"Ventilation à nettoyer",c:"yellow"}],taNeg:"Portes de douche défaillantes (fuites), peinture qui s'écaille, rayures sur meubles, ventilation sale",taPos:"Guest Experience Manager très réactif, design branché, bon emplacement",icebreaker:"4 types de signaux = dossier solide. Contacter Gildas Guyomard (Guest Experience Mgr).",contacts:[{nom:"Benjamin Marques",fn:"Direction",mobile:"—",terminé:false,hsId:"136520146845"},{nom:"Gildas Guyomard",fn:"Guest Experience Mgr",mobile:"—",terminé:false,hsId:"244999578389"}]},
+  {jour:"j2",date:"03/11/2026",arr:"6e",nom:"Biografy — Hotel de Buci",groupe:"Biografy",phone:"01 45 51 20 22",score:45,prio:"P3",taNote:4.8,taAvis:662,sig:"nul",kwRU:[{txt:"Groupe rigoureux",c:"green"},{txt:"Bon état général",c:"green"}],taNeg:"Très peu de signaux négatifs",taPos:"Hôtel charmant, déco soignée, excellent accueil",icebreaker:"Groupe 4 hôtels (Buci, Artus, Madison, Bourgogne). Mathias Gauthier = Dir. Technique.",contacts:[{nom:"Romain Binet",fn:"Direction",mobile:"—",terminé:false,hsId:"173787785887"},{nom:"Emilie Arabyan",fn:"Direction",mobile:"—",terminé:false,hsId:"246151"},{nom:"Mathias Gauthier",fn:"Directeur Technique",mobile:"—",terminé:false,hsId:""},{nom:"Anja Spasovska",fn:"Direction",mobile:"—",terminé:false,hsId:"245051"}]}
+];
+
+const HUBSPOT_PORTAL = '19495777';
+let state = {};
+try { state = JSON.parse(localStorage.getItem('suivi_paris_v2')||'{}'); } catch(e){}
+function save(){try{localStorage.setItem('suivi_paris_v2',JSON.stringify(state));}catch(e){}}
+
+function openContactModal(name,hsId){
+  if(!document.getElementById('contact-modal'))createModal();
+  document.getElementById('modal-name').textContent=name;
+  const hubspot=document.getElementById('modal-hubspot');
+  hubspot.replaceChildren();
+  if(hsId){
+    const link=document.createElement('a');
+    link.href=hubspotUrl(hsId);
+    link.target='_blank';
+    link.rel='noopener noreferrer';
+    link.textContent='Ouvrir la fiche HubSpot';
+    hubspot.appendChild(link);
+  }else hubspot.textContent='Aucune fiche HubSpot vérifiée pour ce contact.';
+  const lemlist=document.getElementById('modal-lemlist');
+  lemlist.replaceChildren();
+  const note=document.createElement('p');
+  note.textContent='Statut Lemlist en direct indisponible sur cette page publique. Consultez votre compte Lemlist.';
+  const link=document.createElement('a');
+  link.href='https://app.lemlist.com/';
+  link.target='_blank';
+  link.rel='noopener noreferrer';
+  link.textContent='Ouvrir Lemlist';
+  lemlist.append(note,link);
+  document.getElementById('contact-modal').style.display='flex';
+}
+function closeContactModal(){const m=document.getElementById('contact-modal');if(m)m.style.display='none';}
+function createModal(){
+  document.body.insertAdjacentHTML('beforeend',`<div id="contact-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center"><div style="background:white;border-radius:8px;padding:30px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;box-shadow:0 10px 40px rgba(0,0,0,0.3)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><h2 id="modal-name" style="margin:0"></h2><button onclick="closeContactModal()" style="background:none;border:none;font-size:24px;cursor:pointer">✕</button></div><div style="margin-bottom:20px"><h3 style="color:#1c2b4a;font-size:14px;margin-bottom:10px">📋 HubSpot</h3><div id="modal-hubspot" style="padding:10px;background:#f0f7ff;border-radius:4px"></div></div><div><h3 style="color:#1c2b4a;font-size:14px;margin-bottom:10px">📧 Lemlist</h3><div id="modal-lemlist" style="padding:10px;background:#f9f9f9;border-radius:4px"></div></div></div></div>`);
+}
+document.addEventListener('DOMContentLoaded',createModal);
+
+const SIG={fort:{cls:'sig-fort',dot:'🔴',label:'FORT+++'},moyenfort:{cls:'sig-moyenfort',dot:'🟠',label:'Moyen-fort'},moyen:{cls:'sig-moyen',dot:'🟡',label:'Moyen'},faible:{cls:'sig-faible',dot:'🟢',label:'Faible'},nul:{cls:'sig-nul',dot:'⚪',label:'Nul / Neuf'}};
+const STATUS_ALL=['P2','P3','Ae','fait'];
+const STATUS_LBL={P2:'P2 — PRIORITÉ',P3:'P3 — À visiter',Ae:'À écarter',fait:'✓ FAIT'};
+const STATUS_CLS={P2:'s-p2',P3:'s-p3',Ae:'s-ae',fait:'s-fait'};
+function starsFor(n){const f=Math.floor(n);return '★'.repeat(f)+(n-f>=0.3?'½':'')+'☆'.repeat(5-f-(n-f>=0.3?1:0));}
+function barColor(s){if(s>=60)return'#34A853';if(s>=50)return'#4285F4';if(s>=40)return'#F4B400';return'#9AA0A6';}
+function kwClass(c){return c==='red'?'kw':c==='orange'?'kw kw-orange':c==='yellow'?'kw kw-yellow':c==='green'?'kw kw-green':'kw kw-grey';}
+
+const tbody=document.getElementById('tbody');
+let curDay=null;
+HOTELS.forEach((h,idx)=>{
+  if(h.jour!==curDay){
+    curDay=h.jour;
+    const sep=document.createElement('tr');sep.className='day-sep';
+    sep.innerHTML=`<td colspan="13">${h.jour==='j1'?'📅  JOUR 1 — Samedi 31 octobre 2026 · 15e & 7e arrondissements — 13 hôtels':'📅  JOUR 2 — Mardi 3 novembre 2026 · 7e est & 6e arrondissements — 8 hôtels'}</td>`;
+    tbody.appendChild(sep);
+  }
+  const sig=SIG[h.sig]||SIG.nul;
+  const curStatus=state[`st_${idx}`]||h.prio;
+  const noteAngle=state[`angle_${idx}`]||'';
+  const noteResult=state[`result_${idx}`]||'';
+  const noteNext=state[`next_${idx}`]||'';
+  const kwHtml=h.kwRU.map(k=>`<span class="${kwClass(k.c)}">${k.txt}</span>`).join('');
+  const mainC=h.contacts[0];
+  const mainName=mainC.hsId?`<a href="${hubspotUrl(mainC.hsId)}" target="_blank" rel="noopener noreferrer">${mainC.nom}</a>`:mainC.nom;
+  const hasT=h.contacts.some(c=>c.terminé);
+  const allContactsHtml=h.contacts.map((c,ci)=>{
+    const mob=c.mobile==='—'?`<span class="contact-mob miss">mobile non publié</span>`:`<span class="contact-mob"><a href="tel:${c.mobile.replace(/\s/g,'')}">${c.mobile}</a></span>`;
+    const badge=c.terminé?'<span class="lb-t">✉</span>':'';
+    const cName=c.hsId?`<a href="${hubspotUrl(c.hsId)}" target="_blank" rel="noopener noreferrer">${c.nom}</a>`:c.nom;
+    const cc=state[`contact_${idx}_${ci}`]===true;
+    return `<div class="contact-item${c.terminé?' terminé':''}"><div style="display:flex;align-items:flex-start;gap:6px;justify-content:space-between"><div style="display:flex;gap:4px;align-items:flex-start"><div class="checkbox-wrapper${cc?' checked':''}" id="cc_${idx}_${ci}" style="font-size:12px;cursor:pointer;margin-top:2px"><span class="checkbox-icon">${cc?'✅':'☐'}</span></div><div><span class="contact-name">${cName}${badge}</span><span class="contact-fn">${c.fn}</span>${mob}</div></div>${c.hsId?`<button onclick="openContactModal('${c.nom.replace(/'/g,"\\'")}','${c.hsId}')" style="background:#4285f4;color:white;border:none;padding:2px 6px;border-radius:3px;cursor:pointer;font-size:10px;white-space:nowrap;margin-top:2px">👤</button>`:''}</div></div>`;
+  }).join('');
+  const isChecked=state[`done_${idx}`]===true;
+  const tr=document.createElement('tr');
+  tr.dataset.prio=h.prio;tr.dataset.jour=h.jour;tr.dataset.hasT=hasT?'1':'0';tr.dataset.idx=idx;
+  tr.innerHTML=`<td class="checkbox-col"><div class="checkbox-wrapper${isChecked?' checked':''}" id="ck_${idx}"><span class="checkbox-icon">${isChecked?'✅':'☐'}</span></div></td>
+<td style="text-align:center"><span class="status-pill ${STATUS_CLS[curStatus]}" id="sp_${idx}">${STATUS_LBL[curStatus]}</span></td>
+<td><div style="display:flex;align-items:flex-start;gap:6px"><div class="checkbox-wrapper${isChecked?' checked':''}" id="ckn_${idx}" style="margin-top:2px;flex-shrink:0"><span class="checkbox-icon" style="font-size:14px">${isChecked?'✅':'☐'}</span></div><div><strong style="font-size:11.5px">${h.nom}</strong><div style="font-size:10px;color:var(--muted);margin-top:2px">${h.phone}</div><div style="font-size:10px;color:var(--muted)">${h.groupe}</div></div></div></td>
+<td style="text-align:center;font-weight:700">${h.arr}</td>
+<td><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><div><span class="contact-name">${mainName}${mainC.terminé?'<span class="lb-t">✉</span>':''}</span><span class="contact-fn">${mainC.fn}</span>${mainC.mobile!=='—'?`<span class="contact-mob"><a href="tel:${mainC.mobile.replace(/\s/g,'')}">${mainC.mobile}</a></span>`:'<span class="contact-mob miss">mobile non publié</span>'}</div><button onclick="openContactModal('${mainC.nom.replace(/'/g,"\\'")}','${mainC.hsId||''}')" style="background:#4285f4;color:white;border:none;padding:4px 8px;border-radius:3px;cursor:pointer;font-size:11px;font-weight:600;white-space:nowrap">👤 Infos</button></div></td>
+<td><div class="contacts-list">${allContactsHtml}</div></td>
+<td><div class="ta-note"><span class="ta-stars">${starsFor(h.taNote)}</span> ${h.taNote}/5</div><div class="ta-avis">${h.taAvis.toLocaleString('fr-FR')} avis</div></td>
+<td><span class="sig ${sig.cls}">${sig.dot} ${sig.label}</span><div class="sig-keywords">${kwHtml}</div><div class="ta-pos">✅ ${h.taPos}</div><div style="font-size:10px;color:#C62820;margin-top:2px">⚠ ${h.taNeg}</div></td>
+<td><div class="score-bar"><span class="score-num">${h.score}</span><div class="bar-bg"><div class="bar-fill" style="width:${h.score}%;background:${barColor(h.score)}"></div></div></div></td>
+<td style="font-weight:600;white-space:nowrap;font-size:11px">${h.date}</td>
+<td class="editable-col"><span class="edit-label">Angle d'attaque</span><textarea class="note-cell" rows="3" placeholder="${h.icebreaker}" id="angle_${idx}">${escapeHtml(noteAngle)}</textarea></td>
+<td class="editable-col"><span class="edit-label">Résultat du passage</span><textarea class="note-cell" rows="3" placeholder="Écrire ici après la visite…" id="result_${idx}">${escapeHtml(noteResult)}</textarea></td>
+<td class="editable-col"><span class="edit-label">Prochaine étape</span><textarea class="note-cell" rows="2" placeholder="RDV le… / Rappeler… / Envoyer devis…" id="next_${idx}">${escapeHtml(noteNext)}</textarea></td>`;
+
+  h.contacts.forEach((c,ci)=>{
+    tr.querySelector(`#cc_${idx}_${ci}`).addEventListener('click',function(){
+      state[`contact_${idx}_${ci}`]=!state[`contact_${idx}_${ci}`];
+      this.classList.toggle('checked');this.querySelector('.checkbox-icon').textContent=state[`contact_${idx}_${ci}`]?'✅':'☐';save();
+    });
+  });
+  const sync=(a,b,val)=>{[a,b].forEach(id=>{const el=tr.querySelector('#'+id);if(!el)return;el.classList.toggle('checked',val);el.querySelector('.checkbox-icon').textContent=val?'✅':'☐';});};
+  tr.querySelector(`#ck_${idx}`).addEventListener('click',function(){state[`done_${idx}`]=!state[`done_${idx}`];sync(`ck_${idx}`,`ckn_${idx}`,state[`done_${idx}`]);save();});
+  tr.querySelector(`#ckn_${idx}`).addEventListener('click',function(){state[`done_${idx}`]=!state[`done_${idx}`];sync(`ck_${idx}`,`ckn_${idx}`,state[`done_${idx}`]);save();});
+  tr.querySelector(`#sp_${idx}`).addEventListener('click',function(){const cur=state[`st_${idx}`]||h.prio;const ni=STATUS_ALL[(STATUS_ALL.indexOf(cur)+1)%STATUS_ALL.length];state[`st_${idx}`]=ni;tr.dataset.prio=ni;this.className=`status-pill ${STATUS_CLS[ni]}`;this.textContent=STATUS_LBL[ni];save();});
+  ['angle','result','next'].forEach(k=>{tr.querySelector(`#${k}_${idx}`).addEventListener('input',function(){state[`${k}_${idx}`]=this.value;save();});});
+  tbody.appendChild(tr);
+});
+
+document.querySelectorAll('.fb[data-f]').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.fb[data-f]').forEach(b=>b.classList.remove('active'));this.classList.add('active');
+    const f=this.dataset.f;
+    document.querySelectorAll('tbody tr:not(.day-sep)').forEach(row=>{
+      let show=true;
+      if(f==='P2')show=row.dataset.prio==='P2';
+      else if(f==='P3')show=row.dataset.prio==='P3';
+      else if(f==='Ae')show=row.dataset.prio==='Ae';
+      else if(f==='lemlist')show=row.dataset.hasT==='1';
+      else if(f==='j1')show=row.dataset.jour==='j1';
+      else if(f==='j2')show=row.dataset.jour==='j2';
+      row.toggleAttribute('data-hidden',!show);
+    });
+    document.querySelectorAll('.day-sep').forEach(sep=>{
+      const day=sep.nextElementSibling?.dataset?.jour;
+      if(f==='j1')sep.toggleAttribute('data-hidden',day!=='j1');
+      else if(f==='j2')sep.toggleAttribute('data-hidden',day!=='j2');
+      else sep.removeAttribute('data-hidden');
+    });
+  });
+});
+</script>
+</body></html>
