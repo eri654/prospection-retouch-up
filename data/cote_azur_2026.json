@@ -1,0 +1,516 @@
+{
+  "observedAt": "2026-09-18T14:40:21.5207465Z",
+  "cities": {
+    "antibes": [
+      {
+        "name": "Hôtel du Cap-Eden-Roc",
+        "address": "Boulevard John Fitzgerald Kennedy, 06160 Antibes",
+        "sector": "Cap d’Antibes",
+        "source": "https://www.oetkerhotels.com/fr/hotels/hotel-du-cap-eden-roc/contact/",
+        "contacts": [
+          {
+            "name": "Philippe Perd",
+            "role": "Direction générale",
+            "linkedin": "https://www.linkedin.com/in/philippe-perd-31497316",
+            "hubspotId": ""
+          },
+          {
+            "name": "Sophie Volant",
+            "role": "Hotel manager",
+            "linkedin": "https://www.linkedin.com/in/sophie-volant-54150410",
+            "hubspotId": ""
+          },
+          {
+            "name": "Thierry Demolliens",
+            "role": "Resident manager",
+            "linkedin": "https://www.linkedin.com/in/thierry-demolliens-2329a621",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Villa Miraé Cap d’Antibes",
+        "address": "770 chemin de la Garoupe, 06160 Antibes",
+        "sector": "Cap d’Antibes",
+        "source": "https://www.villamirae-capantibes.com/restaurant-mirae",
+        "contacts": [
+          {
+            "name": "Solène Bonal",
+            "role": "Adjointe de direction",
+            "linkedin": "https://www.linkedin.com/in/solene-bonal-b36b34157",
+            "hubspotId": ""
+          },
+          {
+            "name": "Yann Protois",
+            "role": "Direction technique, groupe Inwood",
+            "linkedin": "https://www.linkedin.com/in/yann-protois-aa689b106",
+            "hubspotId": "111196883762"
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Belles Rives",
+        "address": "33 boulevard Édouard Baudoin, 06160 Juan-les-Pins",
+        "sector": "Juan-les-Pins",
+        "source": "https://www.bellesrives.com/fr/contact-acces.html",
+        "contacts": [
+          {
+            "name": "Stéphane Vuillaume",
+            "role": "Direction, groupe Belles Rives / Juana",
+            "linkedin": "https://www.linkedin.com/in/stéphane-vuillaume-53887828",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Juana",
+        "address": "19 avenue Georges Gallice, 06160 Juan-les-Pins",
+        "sector": "Juan-les-Pins",
+        "source": "https://www.hotel-juana.com/contact/",
+        "contacts": [
+          {
+            "name": "Stéphane Vuillaume",
+            "role": "Direction, groupe Belles Rives / Juana",
+            "linkedin": "https://www.linkedin.com/in/stéphane-vuillaume-53887828",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "AC Hotel Ambassadeur Antibes",
+        "address": "50–52 chemin des Sables, 06160 Juan-les-Pins",
+        "sector": "Juan-les-Pins",
+        "source": "https://www.marriott.com/fr/hotels/jlpar-ac-hotel-ambassadeur-antibes-juan-les-pins/overview/",
+        "contacts": []
+      },
+      {
+        "name": "Royal Antibes Hotel",
+        "address": "16 boulevard Maréchal Leclerc, 06600 Antibes",
+        "sector": "Antibes centre",
+        "source": "https://www.hotel-royal-antibes.com/contact/",
+        "contacts": []
+      },
+      {
+        "name": "Thalazur Antibes – Baie des Anges",
+        "address": "770 chemin des Moyennes Bréguières, 06600 Antibes",
+        "sector": "Antibes centre",
+        "source": "https://www.thalazur.fr/antibes/hotel/adresse/",
+        "contacts": [
+          {
+            "name": "Marie Christelle NATCHEYAN",
+            "role": "Gouvernante générale",
+            "linkedin": "https://www.linkedin.com/in/marie-christelle-natcheyan-63830185",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Mercure Antibes Sophia Antipolis",
+        "address": "Rue Albert Caquot, 06560 Valbonne",
+        "sector": "Sophia Antipolis",
+        "source": "https://all.accor.com/hotel/1122/index.fr.shtml",
+        "contacts": [
+          {
+            "name": "Jean-Luc Passion",
+            "role": "Direction, Mercure et ibis Sophia",
+            "linkedin": "https://www.linkedin.com/in/jean-luc-passion-91a57331",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "ibis Antibes Sophia Antipolis",
+        "address": "502 rue Albert Caquot, 06560 Valbonne",
+        "sector": "Sophia Antipolis",
+        "source": "https://all.accor.com/hotel/0711/index.fr.shtml",
+        "contacts": [
+          {
+            "name": "Jean-Luc Passion",
+            "role": "Direction, Mercure et ibis Sophia",
+            "linkedin": "https://www.linkedin.com/in/jean-luc-passion-91a57331",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Novotel Antibes Sophia Antipolis",
+        "address": "290 rue Fedor Dostoïevski, 06560 Valbonne",
+        "sector": "Sophia Antipolis",
+        "source": "https://all.accor.com/hotel/0398/index.fr.shtml",
+        "contacts": []
+      }
+    ],
+    "cannes": [
+      {
+        "name": "Hôtel Barrière Le Majestic",
+        "address": "10 boulevard de la Croisette, 06400 Cannes",
+        "sector": "Croisette",
+        "source": "https://www.hotelsbarriere.com/cannes/le-majestic",
+        "contacts": [
+          {
+            "name": "Charles Richez",
+            "role": "Fonction à confirmer",
+            "linkedin": "https://www.linkedin.com/in/charlesrichez",
+            "hubspotId": ""
+          },
+          {
+            "name": "Guillaume Massiera",
+            "role": "Hotel manager",
+            "linkedin": "https://www.linkedin.com/in/guillaume-massiera",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "JW Marriott Cannes",
+        "address": "50 boulevard de la Croisette, 06400 Cannes",
+        "sector": "Croisette",
+        "source": "https://www.marriott.com/en-us/hotels/ncejw-jw-marriott-cannes/overview/",
+        "contacts": [
+          {
+            "name": "Leila Boniface",
+            "role": "Gouvernante générale, fonction actuelle à confirmer",
+            "linkedin": "",
+            "hubspotId": "226075651598"
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Martinez",
+        "address": "73 boulevard de la Croisette, 06400 Cannes",
+        "sector": "Croisette",
+        "source": "https://www.hyatt.com/unbound-collection/en-US/jcagh-hotel-martinez/hotel-info",
+        "contacts": [
+          {
+            "name": "Michel Cottray",
+            "role": "Fonction à confirmer",
+            "linkedin": "https://www.linkedin.com/in/michel75",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Barrière Le Gray d’Albion",
+        "address": "38 rue des Serbes, 06400 Cannes",
+        "sector": "Centre",
+        "source": "https://www.hotelsbarriere.com/cannes/le-gray-d-albion",
+        "contacts": []
+      },
+      {
+        "name": "Five Seas Hôtel Cannes",
+        "address": "1 rue Notre-Dame, 06400 Cannes",
+        "sector": "Centre",
+        "source": "https://www.fiveseashotel.com/",
+        "contacts": [
+          {
+            "name": "Mohamed Bendari",
+            "role": "Hotel manager",
+            "linkedin": "https://www.linkedin.com/in/mohamed-bendari-9901b3b9",
+            "hubspotId": "241135347110"
+          },
+          {
+            "name": "Maud Van Brussel Fouilleroux",
+            "role": "Direction hébergement",
+            "linkedin": "https://www.linkedin.com/in/maud-van-brussel-fouilleroux-5b49a921a",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Eden Hôtel & Spa",
+        "address": "133 rue d’Antibes, 06400 Cannes",
+        "sector": "Centre",
+        "source": "https://eden-hotel-cannes.com/contact/",
+        "contacts": [
+          {
+            "name": "Nathalie Deydier Ranchy",
+            "role": "Fonction à confirmer",
+            "linkedin": "https://www.linkedin.com/in/nathalie-deydier-ranchy-02460264",
+            "hubspotId": ""
+          },
+          {
+            "name": "Solène Druesnes",
+            "role": "Fonction à confirmer",
+            "linkedin": "https://www.linkedin.com/in/solène-druesnes-bb0692198",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Cavendish",
+        "address": "11 boulevard Carnot, 06400 Cannes",
+        "sector": "Centre",
+        "source": "https://cavendish-cannes.com/fr/",
+        "contacts": []
+      },
+      {
+        "name": "Novotel Suites Cannes Centre",
+        "address": "46 bis boulevard Carnot, 06400 Cannes",
+        "sector": "Centre",
+        "source": "https://all.accor.com/hotel/3460/index.fr.shtml",
+        "contacts": [
+          {
+            "name": "Vanessa D’AGUI",
+            "role": "Adjointe de direction",
+            "linkedin": "https://www.linkedin.com/in/vanessa-d’agui-a27183348",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Croisette Beach Cannes MGallery",
+        "address": "13 rue du Canada, 06400 Cannes",
+        "sector": "Centre",
+        "source": "https://all.accor.com/hotel/1284/index.fr.shtml",
+        "contacts": [
+          {
+            "name": "Stefano Spila",
+            "role": "Responsable technique",
+            "linkedin": "https://www.linkedin.com/in/stefano-spila-2a208424a",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Mercure Cannes Mandelieu",
+        "address": "6 allée des Cormorans, 06150 Cannes",
+        "sector": "La Bocca",
+        "source": "https://all.accor.com/hotel/1190/index.fr.shtml",
+        "contacts": [
+          {
+            "name": "Magali Laurans",
+            "role": "Fonction à confirmer",
+            "linkedin": "https://www.linkedin.com/in/magali-laurans-194789137",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "ibis Cannes Plage La Bocca",
+        "address": "23 avenue Francis Tonner, 06150 Cannes",
+        "sector": "La Bocca",
+        "source": "https://all.accor.com/hotel/1170/index.fr.shtml",
+        "contacts": []
+      },
+      {
+        "name": "Pullman Cannes Mandelieu",
+        "address": "605 avenue du Général de Gaulle, 06210 Mandelieu-la-Napoule",
+        "sector": "Mandelieu",
+        "source": "https://all.accor.com/hotel/1168/index.fr.shtml",
+        "contacts": []
+      }
+    ],
+    "nice": [
+      {
+        "name": "Hôtel du Couvent",
+        "address": "1 rue Honoré Ugo, 06300 Nice",
+        "sector": "Vieux-Nice",
+        "source": "https://www.hotelducouvent.com/fr/",
+        "contacts": []
+      },
+      {
+        "name": "Hôtel Beau Rivage",
+        "address": "24 rue Saint-François-de-Paule, 06300 Nice",
+        "sector": "Vieux-Nice",
+        "source": "https://www.hotelnicebeaurivage.com/",
+        "contacts": []
+      },
+      {
+        "name": "Anantara Plaza Nice",
+        "address": "12 avenue de Verdun, 06000 Nice",
+        "sector": "Centre",
+        "source": "https://www.anantara.com/fr/plaza-nice/contact",
+        "contacts": [
+          {
+            "name": "Lorena CUARTERO",
+            "role": "Hotel manager",
+            "linkedin": "https://www.linkedin.com/in/lorena-cuartero-383574148",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Maison Albar – Le Victoria",
+        "address": "6 avenue de Suède, 06000 Nice",
+        "sector": "Centre",
+        "source": "https://maison-albar-hotels-le-victoria.com/",
+        "contacts": []
+      },
+      {
+        "name": "Boscolo Nice Hôtel & Spa",
+        "address": "12 boulevard Victor Hugo, 06000 Nice",
+        "sector": "Centre",
+        "source": "https://www.boscolocollection.com/nice",
+        "contacts": []
+      },
+      {
+        "name": "Hôtel Aston La Scala",
+        "address": "12 avenue Félix Faure, 06000 Nice",
+        "sector": "Centre",
+        "source": "https://www.hotel-aston.com/",
+        "contacts": []
+      },
+      {
+        "name": "Best Western Plus Hôtel Masséna",
+        "address": "58 rue Gioffredo, 06000 Nice",
+        "sector": "Centre",
+        "source": "https://www.hotel-massena-nice.com/",
+        "contacts": []
+      },
+      {
+        "name": "Hôtel West End",
+        "address": "31 promenade des Anglais, 06000 Nice",
+        "sector": "Promenade",
+        "source": "https://www.hotel-westend.com/",
+        "contacts": [
+          {
+            "name": "Georges Pradier",
+            "role": "Direction",
+            "linkedin": "https://www.linkedin.com/in/georges-pradier-39459558",
+            "hubspotId": "237577668231"
+          }
+        ]
+      },
+      {
+        "name": "Hôtel Palais de la Méditerranée",
+        "address": "13 promenade des Anglais, 06000 Nice",
+        "sector": "Promenade",
+        "source": "https://www.hyatt.com/unbound-collection/fr-FR/ncehr-hotel-palais-de-la-mediterranee/hotel-info",
+        "contacts": []
+      },
+      {
+        "name": "AC Hotel Nice",
+        "address": "59 promenade des Anglais, 06000 Nice",
+        "sector": "Promenade",
+        "source": "https://www.marriott.com/fr/hotels/nceac-ac-hotel-nice/overview/",
+        "contacts": []
+      },
+      {
+        "name": "Radisson Blu Hotel Nice",
+        "address": "223 promenade des Anglais, 06200 Nice",
+        "sector": "Promenade",
+        "source": "https://www.radissonhotels.com/fr-fr/hotels/radisson-blu-nice",
+        "contacts": []
+      },
+      {
+        "name": "Hôtel La Villa Nice Promenade",
+        "address": "11 rue Saint-Philippe, 06000 Nice",
+        "sector": "Promenade",
+        "source": "https://www.hotel-villa-nice.com/fr/",
+        "contacts": []
+      },
+      {
+        "name": "DoubleTree Nice Centre Iconic",
+        "address": "8 avenue Thiers, 06000 Nice",
+        "sector": "Gare",
+        "source": "https://www.hilton.com/fr/hotels/ncefrdi-doubletree-nice-centre-iconic/hotel-location/",
+        "contacts": []
+      },
+      {
+        "name": "Hôtel Nice Excelsior",
+        "address": "19 avenue Durante, 06000 Nice",
+        "sector": "Gare",
+        "source": "https://www.excelsiornice.com/fr/",
+        "contacts": []
+      },
+      {
+        "name": "ibis Styles Nice Centre Gare",
+        "address": "3–5 avenue Durante, 06000 Nice",
+        "sector": "Gare",
+        "source": "https://all.accor.com/hotel/9907/index.fr.shtml",
+        "contacts": []
+      },
+      {
+        "name": "Moxy Nice",
+        "address": "Joia Méridia, 6 rue Colette Pons-Dreyfus, 06200 Nice",
+        "sector": "Ouest / Méridia",
+        "source": "https://www.marriott.com/en-us/hotels/nceox-moxy-nice/overview/",
+        "contacts": [
+          {
+            "name": "Jérôme Castelain",
+            "role": "Direction générale adjointe",
+            "linkedin": "https://www.linkedin.com/in/jérôme-castelain-b95945a5",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "NH Nice",
+        "address": "2–4 parvis de l’Europe, 06300 Nice",
+        "sector": "Est",
+        "source": "https://www.nh-hotels.com/fr/hotel/nh-nice",
+        "contacts": []
+      },
+      {
+        "name": "Splendid Hotel & Spa Nice",
+        "address": "50 boulevard Victor Hugo, 06000 Nice",
+        "sector": "Centre",
+        "source": "https://www.splendid-nice.com/lhotel/",
+        "contacts": []
+      },
+      {
+        "name": "OKKO Hotels Nice Aéroport",
+        "address": "147 boulevard René Cassin, 06200 Nice",
+        "sector": "Aéroport",
+        "source": "https://www.okkohotels.com/fr/page/nice/okko-hotels-nice-aeroport.3097.html",
+        "contacts": [
+          {
+            "name": "Quentin LARRIEU",
+            "role": "Adjoint de direction hébergement",
+            "linkedin": "",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "Novotel Nice Aéroport Cap 3000",
+        "address": "40 avenue de Verdun, 06700 Saint-Laurent-du-Var",
+        "sector": "Aéroport",
+        "source": "https://all.accor.com/hotel/0414/index.fr.shtml",
+        "contacts": [
+          {
+            "name": "Jean Paul Aubé",
+            "role": "Direction, Novotel Nice Aéroport Cap 3000",
+            "linkedin": "https://www.linkedin.com/in/jean-paul-aube",
+            "hubspotId": ""
+          }
+        ]
+      },
+      {
+        "name": "ibis Styles Nice Cap 3000 Aéroport",
+        "address": "190 avenue Georges Guynemer, 06700 Saint-Laurent-du-Var",
+        "sector": "Aéroport",
+        "source": "https://all.accor.com/hotel/5489/index.fr.shtml",
+        "contacts": []
+      },
+      {
+        "name": "Radisson Hotel Nice Airport",
+        "address": "24 rue Costes et Bellonte, 06200 Nice",
+        "sector": "Aéroport",
+        "source": "https://www.radissonhotels.com/fr-fr/hotels/radisson-nice-airport",
+        "contacts": []
+      },
+      {
+        "name": "Crowne Plaza Nice Grand Arenas",
+        "address": "Rue Costes et Bellonte, 06200 Nice",
+        "sector": "Aéroport",
+        "source": "https://www.ihg.com/crowneplaza/hotels/us/en/nice/ncean/hoteldetail/directions",
+        "contacts": []
+      },
+      {
+        "name": "Sheraton Nice Airport",
+        "address": "480 promenade des Anglais, 06200 Nice",
+        "sector": "Aéroport",
+        "source": "https://www.marriott.com/fr/hotels/ncesi-sheraton-nice/overview/",
+        "contacts": []
+      },
+      {
+        "name": "Holiday Inn Nice Port Saint Laurent",
+        "address": "167 promenade des Flots Bleus, 06700 Saint-Laurent-du-Var",
+        "sector": "Aéroport",
+        "source": "https://www.ihg.com/holidayinn/hotels/us/en/nice/nceab/hoteldetail/directions",
+        "contacts": []
+      }
+    ]
+  }
+}

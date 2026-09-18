@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prospection terrain · Retouch'Up</title>
   <style>
-    body { max-width: 720px; margin: 4rem auto; padding: 0 1rem; font: 16px/1.5 system-ui, sans-serif; color: #1c2b4a; }
-    a { color: #1155cc; }
-    .card { border: 1px solid #a8c0e8; border-radius: 8px; padding: 1.5rem; background: #f5f8ff; }
+    body{max-width:900px;margin:3rem auto;padding:0 1rem;font:15px/1.5 system-ui,sans-serif;background:#cfe2ff;color:#1c2b4a}
+    h1{color:#0a3a8a}a{color:#1155cc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+    .card{border:1px solid #a8c0e8;border-radius:8px;padding:1.25rem;background:#fff}.card h2{font-size:1.1rem;margin:0 0 .4rem}.card p{margin:.3rem 0 1rem}
+    .note{margin-top:2rem;padding:.8rem 1rem;background:#fff3cd;border-radius:6px;font-size:.9rem}
   </style>
 </head>
 <body>
   <h1>Prospection terrain · Retouch'Up</h1>
-  <div class="card">
-    <h2>Paris · EquipHotel 2026</h2>
-    <p>21 hôtels dans les 6e, 7e et 15e arrondissements.</p>
-    <p><a href="paris_equiphotel_2026.html">Ouvrir le tableau de suivi</a></p>
+  <p>Feuilles de route partageables pour les visites d'hôtels.</p>
+  <div class="grid">
+    <section class="card"><h2>Nice et aéroport</h2><p>25 hôtels · 5 placements de contacts · secteurs et dates de visite à planifier.</p><a href="nice_2026.html">Ouvrir la feuille Nice</a></section>
+    <section class="card"><h2>Cannes et Mandelieu</h2><p>12 hôtels · 11 placements de contacts · secteurs et dates de visite à planifier.</p><a href="cannes_2026.html">Ouvrir la feuille Cannes</a></section>
+    <section class="card"><h2>Antibes et Sophia Antipolis</h2><p>10 hôtels · 10 placements de contacts · secteurs et dates de visite à planifier.</p><a href="antibes_2026.html">Ouvrir la feuille Antibes</a></section>
+    <section class="card"><h2>Paris · EquipHotel 2026</h2><p>21 hôtels dans les 6e, 7e et 15e arrondissements.</p><a href="paris_equiphotel_2026.html">Ouvrir le tableau Paris</a></section>
   </div>
-  <p>Les coches et notes restent dans le navigateur utilisé. Elles ne se synchronisent pas entre personnes.</p>
+  <p class="note">Les coches, dates et notes sont enregistrées sur l'appareil utilisé. Elles ne se synchronisent pas entre personnes.</p>
 </body>
 </html>
