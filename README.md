@@ -4,7 +4,7 @@ Ce dépôt héberge les feuilles de route consultables sans compte Claude.
 
 ## Feuilles disponibles
 
-- [Côte d'Azur — Nice, Cannes, Antibes](cote_azur_2026.html) : **une seule page**, 68 hôtels, 122 personnes nommées et 34 fiches établissement sans personne nommée. Elle réunit les quatre listes : Nice 62, Cannes 47, Antibes 11 et hôtels génériques 99 inscriptions. Les 219 inscriptions correspondent à 156 fiches distinctes, car certaines figurent dans plusieurs listes.
+- [Côte d'Azur — Nice, Cannes, Antibes](cote_azur_2026.html) : **une seule page**, 68 hôtels, 90 personnes nommées et 34 fiches établissement dans Nice, Cannes, Antibes et les communes voisines des hôtels du parcours. Les quatre listes sources comptent 219 inscriptions (Nice 62, Cannes 47, Antibes 11, hôtels génériques 99). Après tri géographique, 168 inscriptions et 124 fiches distinctes restent dans la page ; 32 fiches hors périmètre sont exclues. Les 68 hôtels ont chacun une case Tripadvisor sourcée, y compris une fiche sans avis publié.
 - [Paris · EquipHotel 2026](paris_equiphotel_2026.html) : 21 hôtels et 47 contacts.
 
 Les anciennes adresses Nice, Cannes et Antibes redirigent vers la feuille Côte d'Azur avec le filtre de zone correspondant.

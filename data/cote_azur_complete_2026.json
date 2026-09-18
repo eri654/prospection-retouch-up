@@ -22,6 +22,11 @@
       "memberships": 99
     }
   ],
+  "scope": {
+    "label": "Nice, Cannes, Antibes et communes voisines des hôtels du parcours",
+    "sourceRecords": 156,
+    "excludedRecords": 32
+  },
   "hotels": {
     "antibes": [
       {
@@ -795,55 +800,6 @@
       ]
     },
     {
-      "key": "189a455cd523",
-      "kind": "person",
-      "name": "Candice Barwell Nassar",
-      "role": "Fonction à vérifier",
-      "association": "AREV Saint-Tropez",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/in/candicerbarwell",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/candicerbarwell",
-      "hubspotId": "237574665740",
-      "hotelNames": []
-    },
-    {
-      "key": "8e1ead2eb29d",
-      "kind": "person",
-      "name": "Karine Bajolle",
-      "role": "Directrice des opérations",
-      "association": "ARRELIA (groupe hôtelier, Montpellier)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/karine-bajolle-678596133",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/karine-bajolle-678596133",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "8649874b9a03",
-      "kind": "person",
-      "name": "Stéphane Mattiolo",
-      "role": "Fonction à vérifier",
-      "association": "Best Western Hôtel Méditerranée Menton / Summer Hotels",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/pub/dir/%2B/Mattiolo",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/stéphane-mattiolo-51ba94154",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
       "key": "6a199768a884",
       "kind": "person",
       "name": "Julian Migueres",
@@ -861,23 +817,6 @@
       "hotelNames": [
         "Best Western Plus Hôtel Masséna"
       ]
-    },
-    {
-      "key": "04641b5d9dbe",
-      "kind": "person",
-      "name": "Caroline FRERE",
-      "role": "Directrice d'hôtel / Hotel Manager",
-      "association": "Bikube Lyon",
-      "associationLabel": "Document de prospection · hors tournée (Lyon)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/carolinefrere",
-      "hubspotId": "214799437680",
-      "hotelNames": []
     },
     {
       "key": "d4b66dfb4f36",
@@ -916,39 +855,6 @@
       ]
     },
     {
-      "key": "0d94f4f53408",
-      "kind": "person",
-      "name": "Kevin POTIER",
-      "role": "Fonction à vérifier",
-      "association": "CGH Résidences & Spas, Arâches-la-Frasse",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/pub/dir/Kevin/Potier",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/kevin-potier-214900107",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "5352dd7fd92e",
-      "kind": "person",
-      "name": "Sergiy Yakovlev",
-      "role": "Assistant Gouvernante Générale",
-      "association": "Crowne Plaza Lyon Cité Internationale",
-      "associationLabel": "Document de prospection · hors tournée (Lyon)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/sergiy-yakovlev",
-      "hubspotId": "182880554244",
-      "hotelNames": []
-    },
-    {
       "key": "f61f82b502c9",
       "kind": "person",
       "name": "Morghan CAPELLE",
@@ -966,40 +872,6 @@
       "hotelNames": [
         "DoubleTree Nice Centre Iconic"
       ]
-    },
-    {
-      "key": "d3c4cf035bc7",
-      "kind": "person",
-      "name": "Pierre-Marie Vasseur",
-      "role": "Fonction à vérifier",
-      "association": "Frasers Hospitality (groupe)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/pierrevasseur/fr",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/pierrevasseur",
-      "hubspotId": "237581346393",
-      "hotelNames": []
-    },
-    {
-      "key": "5b13be2755ef",
-      "kind": "person",
-      "name": "Guillaume DE SANZBERRO",
-      "role": "Fonction à vérifier",
-      "association": "Hôtel Alparena & Spa, Montvalezan",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/guillaume-de-sanzberro-37b292100",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/guillaume-de-sanzberro-37b292100",
-      "hubspotId": "237574677821",
-      "hotelNames": []
     },
     {
       "key": "df6900b3cb33",
@@ -1038,23 +910,6 @@
       "hotelNames": [
         "Hôtel Aston La Scala"
       ]
-    },
-    {
-      "key": "ccdb0bfb1928",
-      "kind": "person",
-      "name": "Philippe Chapelle",
-      "role": "Responsable Technique",
-      "association": "Hotel Christopher St Barth",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/philippe-chapelle-2b319124a",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/philippe-chapelle-2b319124a",
-      "hubspotId": "237495655994",
-      "hotelNames": []
     },
     {
       "key": "f25c50850197",
@@ -1243,40 +1098,6 @@
       ]
     },
     {
-      "key": "1d766af8071d",
-      "kind": "person",
-      "name": "Guillaume Lapostolle",
-      "role": "Director of Operations - Rooms at Hyatt Regency Paris Étoile",
-      "association": "Hyatt Regency Paris Étoile",
-      "associationLabel": "Document de prospection · hors tournée (Paris)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/guillaume-lapostolle-45231657",
-      "hubspotId": "237453805908",
-      "hotelNames": []
-    },
-    {
-      "key": "9c683414b6cf",
-      "kind": "person",
-      "name": "Stéphane IACOMACCI",
-      "role": "Directeur technique région Sud-Est",
-      "association": "Lavorel Hotels (direction technique région Sud-Est)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/in/st%C3%A9phane-iacomacci-9b50aba7",
-      "outsideZone": false,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/stéphane-iacomacci-9b50aba7",
-      "hubspotId": "237489467977",
-      "hotelNames": []
-    },
-    {
       "key": "f186cc7ff505",
       "kind": "person",
       "name": "Sandra Urcher",
@@ -1313,56 +1134,6 @@
         "Le Méridien Nice",
         "Mercure Nice Promenade des Anglais"
       ]
-    },
-    {
-      "key": "1c3e602e998f",
-      "kind": "person",
-      "name": "Alexis ARTIS",
-      "role": "Co-Owner Le Rocher Des Abeilles ***",
-      "association": "Le Rocher des Abeilles Hotel",
-      "associationLabel": "Document de prospection · hors tournée (Beausoleil)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/alexis-artis-3533b8199",
-      "hubspotId": "237452716943",
-      "hotelNames": []
-    },
-    {
-      "key": "6bff9f880464",
-      "kind": "person",
-      "name": "Sébastien Grosse",
-      "role": "Fonction à vérifier",
-      "association": "Le Saint-Paul Relais & Châteaux, Saint-Paul-de-Vence",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/s%C3%A9bastien-grosse-7578a2a6",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/sébastien-grosse-7578a2a6",
-      "hubspotId": "237581665385",
-      "hotelNames": []
-    },
-    {
-      "key": "538d0fff836e",
-      "kind": "person",
-      "name": "Anthony Amin Mariani",
-      "role": "Directeur général - Les Copains",
-      "association": "Les Copains (restaurant)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/in/anthony-amin-mariani-54a8b757",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/anthony-amin-mariani-54a8b757",
-      "hubspotId": "",
-      "hotelNames": []
     },
     {
       "key": "e96b52185c77",
@@ -1403,22 +1174,6 @@
       ]
     },
     {
-      "key": "bf1dc850855b",
-      "kind": "person",
-      "name": "Salomé Thompson",
-      "role": "Directrice",
-      "association": "Marseille ; hôtel non identifié sur le profil public",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/salomethompson",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/salomethompson",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
       "key": "ca040d67d147",
       "kind": "person",
       "name": "Jérôme Castelain",
@@ -1435,22 +1190,6 @@
       "hotelNames": [
         "Moxy Nice"
       ]
-    },
-    {
-      "key": "c9c562025806",
-      "kind": "person",
-      "name": "Jérémy DE LEMOS",
-      "role": "Hotel Director - Directeur Général chez Minor Hotels",
-      "association": "NH Toulouse Airport (profil publié ; transition récente)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/j%C3%A9r%C3%A9my-de-lemos-9a362919",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/jérémy-de-lemos-9a362919",
-      "hubspotId": "",
-      "hotelNames": []
     },
     {
       "key": "9593acfe6867",
@@ -1489,40 +1228,6 @@
       "hotelNames": []
     },
     {
-      "key": "f3b5cf567a03",
-      "kind": "person",
-      "name": "Patrick HUREL",
-      "role": "Directeur",
-      "association": "Nice Hôtels Publishing (éditeur)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/patrickhurel",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "",
-      "hubspotId": "75701",
-      "hotelNames": []
-    },
-    {
-      "key": "a5638db35ea4",
-      "kind": "person",
-      "name": "Jean Castet",
-      "role": "Directeur d’exploitation Noto Nice",
-      "association": "Noto Nice (restaurant)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/in/jean-castet-9569b0151",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/jean-castet-9569b0151",
-      "hubspotId": "237493024918",
-      "hotelNames": []
-    },
-    {
       "key": "14293342562e",
       "kind": "person",
       "name": "Jean Paul Aubé",
@@ -1539,23 +1244,6 @@
       "hotelNames": [
         "Novotel Nice Aéroport Cap 3000"
       ]
-    },
-    {
-      "key": "2adc14003e38",
-      "kind": "person",
-      "name": "Olivier Herphelin",
-      "role": "Fonction à vérifier",
-      "association": "OH Consulting",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/olivier-herphelin-4571802a",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/olivier-herphelin-4571802a",
-      "hubspotId": "237577570662",
-      "hotelNames": []
     },
     {
       "key": "6c53dbce0b96",
@@ -1596,23 +1284,6 @@
       ]
     },
     {
-      "key": "265008e32fc5",
-      "kind": "person",
-      "name": "Virginie L.",
-      "role": "Guests Relations Manager Trilingue Anglais, Français, Espagnol",
-      "association": "PSDP Nice (hors hôtellerie)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/virginie-launay42b223170",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/virginie-l-0816a250",
-      "hubspotId": "237453805906",
-      "hotelNames": []
-    },
-    {
       "key": "5f2c5bd35642",
       "kind": "person",
       "name": "Katerina B.",
@@ -1626,40 +1297,6 @@
       ],
       "linkedin": "https://www.linkedin.com/in/katerina-b-281a76185",
       "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "70bdf0871ef4",
-      "kind": "person",
-      "name": "Lionel Van den Haute",
-      "role": "General Manager",
-      "association": "Radisson Blu Marseille Vieux-Port",
-      "associationLabel": "Document de prospection · hors tournée (Marseille)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/lionel-van-den-haute-a5b049115",
-      "hubspotId": "208245510919",
-      "hotelNames": []
-    },
-    {
-      "key": "682e4e6fb165",
-      "kind": "person",
-      "name": "Hassan Elsherbiny",
-      "role": "Directeur général",
-      "association": "Radisson Blu Montpellier",
-      "associationLabel": "Document de prospection · hors tournée (Montpellier)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/hassan-elsherbiny-87b301140",
-      "hubspotId": "282651",
       "hotelNames": []
     },
     {
@@ -1700,22 +1337,6 @@
       ]
     },
     {
-      "key": "cc32cf635835",
-      "kind": "person",
-      "name": "Antonino Portale",
-      "role": "Responsable technique chez SETHEC SOCIETE D EXPLOITATION THERMIQUE ET CLIMATIQUE",
-      "association": "SETHEC (entreprise technique)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/in/antonino-portale-408041155",
-      "outsideZone": true,
-      "origins": [
-        "nice"
-      ],
-      "linkedin": "https://www.linkedin.com/in/antonino-portale-408041155",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
       "key": "7f8de0838315",
       "kind": "person",
       "name": "Laurent Rossi",
@@ -1729,23 +1350,6 @@
       ],
       "linkedin": "https://www.linkedin.com/in/laurent-rossi-88866274",
       "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "a606e8f694ff",
-      "kind": "person",
-      "name": "Lallement Olivier",
-      "role": "General Manager",
-      "association": "Tapestry Collection by Hilton Saint-Tropez",
-      "associationLabel": "Document de prospection · hors tournée (Saint-Tropez)",
-      "associationSource": "",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/lallement-olivier-3067a6a",
-      "hubspotId": "237464801169",
       "hotelNames": []
     },
     {
@@ -1766,39 +1370,6 @@
       "hotelNames": [
         "The Deck Hôtel by HappyCulture"
       ]
-    },
-    {
-      "key": "9dff430b3a3d",
-      "kind": "person",
-      "name": "Lars Hallier",
-      "role": "Fonction à vérifier",
-      "association": "Zoku / Hospitium Advisory (hors tournée)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/lars-hallier-a1569321",
-      "outsideZone": true,
-      "origins": [
-        "nice",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/lars-hallier-a1569321",
-      "hubspotId": "237578678301",
-      "hotelNames": []
-    },
-    {
-      "key": "6f171e62e13c",
-      "kind": "person",
-      "name": "Christophe Marques",
-      "role": "Fonction à vérifier",
-      "association": "ACT (profil public)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/christophe-marques-356363b8",
-      "outsideZone": true,
-      "origins": [
-        "cannes"
-      ],
-      "linkedin": "https://www.linkedin.com/in/christophe-marques-356363b8",
-      "hubspotId": "244209339676",
-      "hotelNames": []
     },
     {
       "key": "b53917676de9",
@@ -1911,22 +1482,6 @@
       "hotelNames": [
         "Charlie's Hôtel Cannes"
       ]
-    },
-    {
-      "key": "41b0e25fcf4d",
-      "kind": "person",
-      "name": "Damien Mageau",
-      "role": "Fonction à vérifier",
-      "association": "ECS Clean&Services, Occitanie",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/damien-mageau-ba7a64179",
-      "outsideZone": true,
-      "origins": [
-        "cannes"
-      ],
-      "linkedin": "",
-      "hubspotId": "",
-      "hotelNames": []
     },
     {
       "key": "45edd4ab0b20",
@@ -2294,39 +1849,6 @@
       ]
     },
     {
-      "key": "be69be9e4dd2",
-      "kind": "person",
-      "name": "Bruno Pin",
-      "role": "Directeur technique",
-      "association": "Inwood Hotels (groupe)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://www.linkedin.com/in/bruno-pin-713960103",
-      "outsideZone": false,
-      "origins": [
-        "cannes"
-      ],
-      "linkedin": "https://www.linkedin.com/in/bruno-pin-713960103",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "cf4f03dccd40",
-      "kind": "person",
-      "name": "Jerome Lutz",
-      "role": "Directeur Financier Région Sud Est",
-      "association": "Inwood Hotels (groupe)",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/jerome-lutz-9095039a",
-      "outsideZone": false,
-      "origins": [
-        "cannes",
-        "hotels"
-      ],
-      "linkedin": "https://www.linkedin.com/in/jerome-lutz-9095039a",
-      "hubspotId": "237434130980",
-      "hotelNames": []
-    },
-    {
       "key": "1d0c4770f3f1",
       "kind": "person",
       "name": "Amina Aleksandrowicz",
@@ -2584,54 +2106,6 @@
       "hotelNames": [
         "Pullman Cannes Mandelieu"
       ]
-    },
-    {
-      "key": "c9b85449a566",
-      "kind": "person",
-      "name": "Mehdi Rezki",
-      "role": "Fonction à vérifier",
-      "association": "Royal Palace Hôtel & Spa, Kirrwiller",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/in/mehdi-rezki-75ab1093",
-      "outsideZone": true,
-      "origins": [
-        "cannes"
-      ],
-      "linkedin": "",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "192ddc4f4d33",
-      "kind": "person",
-      "name": "Malek Rouag",
-      "role": "Agent de maintenance",
-      "association": "",
-      "associationLabel": "Établissement non identifiable dans le profil public",
-      "associationSource": "",
-      "outsideZone": false,
-      "origins": [
-        "cannes"
-      ],
-      "linkedin": "https://www.linkedin.com/in/malek-rouag-6095162a5",
-      "hubspotId": "",
-      "hotelNames": []
-    },
-    {
-      "key": "1b46d91e7c9e",
-      "kind": "person",
-      "name": "Prince's PRINCESS",
-      "role": "Assistante Gouvernante",
-      "association": "",
-      "associationLabel": "Établissement non identifiable dans le profil public",
-      "associationSource": "",
-      "outsideZone": false,
-      "origins": [
-        "cannes"
-      ],
-      "linkedin": "https://www.linkedin.com/in/prince-s-princess-684049b0",
-      "hubspotId": "",
-      "hotelNames": []
     },
     {
       "key": "03fce7df898f",

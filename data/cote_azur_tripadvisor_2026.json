@@ -1,7 +1,70 @@
 {
   "observedAt": "2026-09-18",
-  "method": "Synthèse sélective d'avis de voyageurs Tripadvisor. Un avis est un signal à vérifier sur place, pas un diagnostic de l'hôtel ni une affirmation de besoin actuel.",
+  "method": "Synthèses des fiches et avis voyageurs Tripadvisor consultés le 18 septembre 2026. Une mention positive ou sans défaut précis ne prouve aucun besoin ; un avis négatif reste à vérifier sur place avant prospection.",
   "hotels": {
+    "Hôtel du Couvent": {
+      "date": "août 2026",
+      "summary": "Les avis saluent le décor des chambres et le cadre historique ; les réserves consultées concernent surtout le service et la propreté, sans défaut de surface identifié.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d27184783-Reviews-Hotel_Du_Couvent_A_Luxury_Collection_Hotel_Nice_France-Nice_French_Riviera_Cote_d_Azu.html",
+      "level": "neutral"
+    },
+    "Hôtel Beau Rivage": {
+      "date": "septembre 2026",
+      "summary": "Un avis apprécie la décoration de la chambre mais signale une commande de douche qui fuit et un bouton de chasse défectueux ; ces points relèvent de la plomberie.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197198-Reviews-Hotel_Beau_Rivage-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "technical"
+    },
+    "Anantara Plaza Nice": {
+      "date": "août 2026",
+      "summary": "Un avis décrit une porte de placard et ses rails cassés dans la chambre, ainsi qu'un lavabo bouché.",
+      "opportunity": "Faire contrôler la menuiserie du placard ; distinguer ce point du problème de plomberie.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d261784-Reviews-Anantara_Plaza_Nice_Hotel-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "direct"
+    },
+    "Maison Albar – Le Victoria": {
+      "date": "2026",
+      "summary": "Les avis décrivent des chambres élégantes et récemment aménagées ; les critiques repérées concernent surtout service et propreté, sans dégradation de finition précise.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d27419726-Reviews-Maison_Albar_Le_Victoria-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Boscolo Nice Hôtel & Spa": {
+      "date": "2026",
+      "summary": "Les avis sont partagés sur l'entretien et la propreté, tandis que d'autres apprécient les chambres spacieuses ; aucune surface abîmée précise n'est documentée ici.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d482672-Reviews-Boscolo_Nice_Hotel_Spa-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Hôtel Aston La Scala": {
+      "date": "2026",
+      "summary": "Un avis distingue des chambres modernisées des chambres standard jugées démodées ; l'état varie donc selon la catégorie.",
+      "opportunity": "Demander quelles chambres n'ont pas encore été rafraîchies et inspecter les finitions avant proposition.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197185-Reviews-Hotel_Aston_La_Scala-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "general"
+    },
+    "Best Western Plus Hôtel Masséna": {
+      "date": "août 2026",
+      "summary": "Un avis trouve la salle de bains moderne mais relève des signes de vieillissement dans le reste de la chambre.",
+      "opportunity": "Vérifier sur place si les marques portent sur des surfaces ou meubles réparables.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197187-Reviews-Best_Western_Plus_Hotel_Massena_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot.html",
+      "level": "general"
+    },
+    "Hôtel West End": {
+      "date": "2026",
+      "summary": "Les avis sont contrastés : certains jugent la décoration des chambres datée, d'autres décrivent des chambres propres et confortables.",
+      "opportunity": "Identifier les chambres concernées avant de proposer des retouches ciblées.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197184-Reviews-Hotel_West_End-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "general"
+    },
+    "Hôtel Palais de la Méditerranée": {
+      "date": "juillet 2026",
+      "summary": "Un avis récent souligne la rénovation et la qualité des finitions. Aucun défaut matériel exploitable n'est relevé dans cet avis.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d28010457-Reviews-Hotel_Palais_de_la_Mediterranee-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d.html",
+      "level": "neutral"
+    },
     "AC Hotel Nice": {
       "date": "juillet 2026",
       "summary": "Un avis décrit de la peinture et du mobilier abîmés dans une chambre.",
@@ -9,12 +72,54 @@
       "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d231038-Reviews-AC_Hotel_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
       "level": "direct"
     },
-    "Mercure Nice Promenade des Anglais": {
-      "date": "mai et octobre 2025",
-      "summary": "Des avis jugent les chambres et salles de bains vieillissantes ; l'un décrit une chambre délabrée.",
-      "opportunity": "Vérifier sur place l'état des surfaces et du mobilier avant de proposer des retouches localisées.",
-      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197190-Reviews-Mercure_Nice_Promenade_des_Anglais-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_.html",
-      "level": "general"
+    "Radisson Blu Hotel Nice": {
+      "date": "2026",
+      "summary": "Les avis mettent en avant le front de mer et le confort des chambres ; les réserves visibles portent davantage sur la propreté et la régularité du service que sur une surface abîmée précise.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197181-Reviews-Radisson_Blu_Hotel_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Hôtel La Villa Nice Promenade": {
+      "date": "septembre 2025",
+      "summary": "Un avis décrit une chambre propre mais mentionne des problèmes de climatisation et de douche ; aucun défaut de finition réparable n'est précisé.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d2075416-Reviews-Hotel_La_Villa_Nice_Promenade-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Az.html",
+      "level": "technical"
+    },
+    "DoubleTree Nice Centre Iconic": {
+      "date": "avril 2026",
+      "summary": "Un avis décrit des chambres neuves et propres ; aucun défaut de surface n'est signalé.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d27929895-Reviews-Doubletree_By_Hilton_Nice_Centre_Iconic-Nice_French_Riviera_Cote_d_Azur_Provence_Alpe.html",
+      "level": "neutral"
+    },
+    "Hôtel Nice Excelsior": {
+      "date": "juillet 2026",
+      "summary": "Un avis décrit une chambre propre et confortable ; aucun élément matériel à réparer n'est mentionné.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d219974-Reviews-Hotel_Nice_Excelsior_by_HappyCulture-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot.html",
+      "level": "neutral"
+    },
+    "ibis Styles Nice Centre Gare": {
+      "date": "août 2026",
+      "summary": "Un avis juge la chambre compacte et le rangement limité, sans décrire de dégradation de surface.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d7932671-Reviews-Ibis_Styles_Nice_Centre_Gare-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azu.html",
+      "level": "neutral"
+    },
+    "Moxy Nice": {
+      "date": "avril 2026",
+      "summary": "Un avis présente l'hôtel comme récent et la chambre comme impeccable ; aucun besoin de retouche n'en ressort.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d33015646-Reviews-Moxy_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "NH Nice": {
+      "date": "septembre 2026",
+      "summary": "Un avis récent décrit des chambres très propres ; les réserves générales sur l'entretien ne désignent pas de surface abîmée précise.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197189-Reviews-NH_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
     },
     "Splendid Hotel & Spa Nice": {
       "date": "avril et juin 2026",
@@ -23,12 +128,278 @@
       "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197180-Reviews-Splendid_Hotel_Spa_Nice_Cote_d_Azur-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote.html",
       "level": "direct"
     },
+    "OKKO Hotels Nice Aéroport": {
+      "date": "2025",
+      "summary": "Des avis décrivent des chambres modernes, propres et compactes ; pas de défaut de finition précis dans les avis consultés.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d23540464-Reviews-OKKO_Hotels_Nice_Airport-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Novotel Nice Aéroport Cap 3000": {
+      "date": "juillet 2025",
+      "summary": "Un avis signale une peinture éraflée dans la chambre 332 ; un autre mentionne un canapé taché.",
+      "opportunity": "Contrôler la peinture et l'état du mobilier avant toute retouche.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187238-d197195-Reviews-Novotel_Nice_Aeroport_Cap_3000-St_Laurent_du_Var_French_Riviera_Cote_d_Azur_Provence_Al.html",
+      "level": "direct"
+    },
+    "ibis Styles Nice Cap 3000 Aéroport": {
+      "date": "juin et septembre 2025",
+      "summary": "Un avis apprécie une chambre rénovée et propre ; un autre évoque le bruit extérieur, sans défaut de surface identifié.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187238-d282524-Reviews-Ibis_Styles_Nice_Cap_3000_Aeroport-St_Laurent_du_Var_French_Riviera_Cote_d_Azur_Provenc.html",
+      "level": "neutral"
+    },
+    "Radisson Hotel Nice Airport": {
+      "date": "juin 2026",
+      "summary": "Un avis critique les travaux à proximité et le petit déjeuner ; la salle de bains est jugée correcte dans un autre retour. Aucun défaut de finition ciblé.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d23978775-Reviews-Radisson_Hotel_Nice_Airport-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azu.html",
+      "level": "neutral"
+    },
+    "Crowne Plaza Nice Grand Arenas": {
+      "date": "avril et mai 2026",
+      "summary": "Un avis signale une évacuation de salle de bains et la propreté ; un autre décrit une chambre moderne et propre. Pas de surface détériorée précise.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d19627756-Reviews-Crowne_Plaza_Nice_Grand_Arenas_By_IHG-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_.html",
+      "level": "technical"
+    },
+    "Sheraton Nice Airport": {
+      "date": "juin 2026",
+      "summary": "Un avis mentionne une odeur dans la salle de bains et un fer à repasser défectueux, sans dégradation de surface décrite.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d23902045-Reviews-Sheraton_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "technical"
+    },
+    "Holiday Inn Nice Port Saint Laurent": {
+      "date": "août 2026",
+      "summary": "Un avis sur un séjour d'août décrit des taches sur les murs et des carreaux de salle de bains fissurés. Un autre évoque une réfection des chambres annoncée.",
+      "opportunity": "Vérifier l'état des murs et carreaux et le calendrier de réfection avant proposition.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187238-d233436-Reviews-Holiday_Inn_Nice_Saint_Laurent_Du_Var_by_IHG-St_Laurent_du_Var_French_Riviera_Cote_d_Az.html",
+      "level": "direct"
+    },
+    "Hôtel Posidonia": {
+      "date": "fiche consultée le 18 septembre 2026",
+      "summary": "La fiche Tripadvisor de l'établissement ne contient aucun avis de voyageur publié au relevé ; aucun besoin matériel ne peut en être déduit.",
+      "opportunity": "",
+      "url": "https://fr.tripadvisor.ca/Hotel_Review-g187234-d34611921-Reviews-Posidonia_Hotel-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "no_reviews"
+    },
+    "Le Méridien Nice": {
+      "date": "février 2026",
+      "summary": "Un avis mentionne des travaux dans l'hôtel, sans décrire de défaut de surface dans la chambre ; pas d'angle de retouche établi.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197179-Reviews-Le_Meridien_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Mercure Nice Promenade des Anglais": {
+      "date": "mai et octobre 2025",
+      "summary": "Des avis jugent les chambres et salles de bains vieillissantes ; l'un décrit une chambre délabrée.",
+      "opportunity": "Vérifier sur place l'état des surfaces et du mobilier avant de proposer des retouches localisées.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197190-Reviews-Mercure_Nice_Promenade_des_Anglais-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_.html",
+      "level": "general"
+    },
+    "Nice Centre Hotel": {
+      "date": "juin 2026",
+      "summary": "Un avis juge la décoration datée et signale l'absence de table de nuit ; le réfrigérateur est aussi décrit en panne.",
+      "opportunity": "Inspecter les finitions des chambres concernées, sans assimiler l'équipement en panne à une retouche.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197192-Reviews-Nice_Centre_Hotel-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "general"
+    },
+    "Holiday Inn Nice Centre": {
+      "date": "juillet 2026",
+      "summary": "Un avis critique l'attribution et la vue de la chambre ; aucun dommage de mobilier ou de finition n'y est décrit.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d207539-Reviews-Holiday_Inn_Nice_by_IHG-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Hôtel Le Soleia": {
+      "date": "mai 2026",
+      "summary": "Un avis apprécie une chambre élégante et confortable ; aucun défaut matériel précis n'est signalé.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197204-Reviews-Hotel_Le_Soleia_By_Inwood_Hotels-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html",
+      "level": "neutral"
+    },
+    "Hôtel Helvétique": {
+      "date": "juillet 2026",
+      "summary": "Un avis indique que les tiroirs sous le lavabo de la salle de bains devraient être remplacés ; le retour sur une autre chambre est plus favorable.",
+      "opportunity": "Contrôler les tiroirs et envisager réparation ou remplacement selon leur état réel.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d294175-Reviews-Hotel_Helvetique-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "direct"
+    },
+    "Hôtel Khla": {
+      "date": "août 2026",
+      "summary": "Un avis apprécie le confort de la chambre supérieure ; aucune surface endommagée n'est décrite.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d25252263-Reviews-Hotel_Khla_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Hôtel Nice Azur Riviera": {
+      "date": "août 2026",
+      "summary": "Un avis décrit une chambre propre et confortable ; la réserve concerne une lettre d'accueil mal adressée, pas les finitions.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197224-Reviews-Hotel_Nice_Azur_Riviera-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Villa Otero by HappyCulture": {
+      "date": "2026",
+      "summary": "Les avis consultés décrivent des chambres petites mais propres ; pas de dommage de surface récent et précis retenu.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d231039-Reviews-Villa_Otero_by_HappyCulture-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "The Deck Hôtel by HappyCulture": {
+      "date": "janvier 2026",
+      "summary": "Un avis décrit une chambre rénovée mais avec quelques taches de moisissure et un matelas usé ; d'autres retours louent la propreté et le service.",
+      "opportunity": "Faire rechercher et traiter la cause de l'humidité avant toute retouche de surface.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197196-Reviews-The_Deck_Hotel_by_HappyCulture-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Az.html",
+      "level": "technical"
+    },
+    "Novotel Nice Arénas Aéroport": {
+      "date": "juin et novembre 2025",
+      "summary": "Des avis jugent la chambre agréable et l'hôtel moderne ; un problème de climatisation est signalé, sans défaut de surface.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d232364-Reviews-Novotel_Nice_Arenas_Aeroport-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "technical"
+    },
+    "Mercure Villeneuve-Loubet Plage": {
+      "date": "mars et juillet 2026",
+      "summary": "Un avis décrit une chambre rénovée, propre et de bon goût ; les critiques récentes portent sur piscine et petit déjeuner, sans défaut de finition de chambre.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187247-d456599-Reviews-Mercure_Villeneuve_Loubet_Plage-Villeneuve_Loubet_French_Riviera_Cote_d_Azur_Provence_A.html",
+      "level": "neutral"
+    },
+    "Hôtel Barrière Le Majestic": {
+      "date": "août 2026",
+      "summary": "Un avis loue la chambre vue mer ; la salle de restaurant est décrite comme rénovée. Aucun défaut de surface précis n'est relevé.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d219368-Reviews-Le_Majestic_Barriere-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "JW Marriott Cannes": {
+      "date": "mai 2026",
+      "summary": "Un avis signale une climatisation en panne et une porte de balcon qui ne se verrouillait pas ; aucun dommage de finition n'est décrit.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d197829-Reviews-JW_Marriott_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "technical"
+    },
+    "Hôtel Martinez": {
+      "date": "2026",
+      "summary": "Les avis consultés portent surtout sur le service ; un retour photographié évoque une fuite de climatisation et des moisissures, sujet à traiter d'abord comme maintenance.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d219369-Reviews-Hotel_Martinez_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "technical"
+    },
+    "Hôtel Barrière Le Gray d’Albion": {
+      "date": "juin 2026",
+      "summary": "Un avis apprécie le confort, la douche et l'insonorisation de la chambre, mais critique la régularité du ménage ; aucun défaut de surface identifié.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d197831-Reviews-Hotel_Barriere_Le_Gray_d_Albion-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d.html",
+      "level": "neutral"
+    },
+    "Five Seas Hôtel Cannes": {
+      "date": "septembre 2026",
+      "summary": "Un avis apprécie l'hébergement élégant et l'attention du personnel ; la réserve porte sur le restaurant, sans défaut matériel de chambre.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d2162189-Reviews-Five_Seas_By_Inwood_Hotels_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot.html",
+      "level": "neutral"
+    },
     "Eden Hôtel & Spa": {
       "date": "août 2026",
       "summary": "Un avis récent décrit des chambres vétustes et abîmées ; d'autres avis récents sont positifs.",
       "opportunity": "Demander si certaines chambres ont des marques ou éclats réparables avant remplacement.",
       "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d275265-Reviews-Eden_Hotel_Spa-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
       "level": "general"
+    },
+    "Hôtel Cavendish": {
+      "date": "mai et septembre 2026",
+      "summary": "Des avis apprécient la propreté des chambres, la literie et l'ascenseur historique ; aucun défaut réparable précis n'est signalé.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d228691-Reviews-Hotel_Le_Cavendish-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Novotel Suites Cannes Centre": {
+      "date": "2024-2025",
+      "summary": "Un avis de 2024 juge couloirs et tapis anciens ; un avis de 2025 critique l'état d'une suite. Le caractère ancien impose une vérification actuelle.",
+      "opportunity": "Contrôler les surfaces et tissus sur place avant de qualifier un besoin.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d534752-Reviews-Novotel_Suites_Cannes_Centre-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Az.html",
+      "level": "historical"
+    },
+    "Hôtel Croisette Beach Cannes MGallery": {
+      "date": "2026",
+      "summary": "Les avis consultés apprécient le décor et la propreté des chambres ; pas de défaut de surface précis retenu.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d261847-Reviews-Hotel_Croisette_Beach_Cannes_Mgallery_Collection-Cannes_French_Riviera_Cote_d_Azur_Prov.html",
+      "level": "neutral"
+    },
+    "Mercure Cannes Mandelieu": {
+      "date": "juillet 2026",
+      "summary": "Un avis juge les chambres vieillissantes et appelle à un rafraîchissement, sans désigner une dégradation ponctuelle.",
+      "opportunity": "Demander à voir les chambres concernées pour distinguer retouches et rénovation.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d234692-Reviews-Mercure_Cannes_Mandelieu_Hotel-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_.html",
+      "level": "general"
+    },
+    "ibis Cannes Plage La Bocca": {
+      "date": "2026",
+      "summary": "Un avis décrit une petite chambre propre ; pas de défaut de finition précis dans le retour consulté.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d232385-Reviews-Ibis_Cannes_Plage_La_Bocca-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Pullman Cannes Mandelieu": {
+      "date": "juillet et août 2026",
+      "summary": "Des avis décrivent du mobilier usé et des espaces à rafraîchir. Une réponse de la direction évoque un projet de rénovation en préparation.",
+      "opportunity": "Proposer des retouches localisées compatibles avec le calendrier de rénovation annoncé.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187230-d228811-Reviews-Pullman_Cannes_Mandelieu-Mandelieu_la_Napoule_French_Riviera_Cote_d_Azur_Provence_Alpes.html",
+      "level": "direct"
+    },
+    "Carlton Cannes": {
+      "date": "2026",
+      "summary": "Les avis décrivent des chambres spacieuses et décorées avec soin ; les réserves portent surtout sur bruit ou service, sans défaut matériel précis.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d219954-Reviews-Regent_Carlton_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Mondrian Cannes": {
+      "date": "avril 2025 et avril 2026",
+      "summary": "Un avis apprécie les chambres spacieuses et décorées ; un autre critique des attentes de service et d'équipements, sans dégradation de surface précise.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d197830-Reviews-Mondrian_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
+    },
+    "Hôtel Splendid Cannes": {
+      "date": "juillet 2026",
+      "summary": "Un avis sur le Splendid de Cannes trouve les chambres vieillottes et suggère un rafraîchissement ; d'autres aspects du séjour sont jugés corrects.",
+      "opportunity": "Repérer les chambres concernées et les surfaces éventuellement réparables.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d219332-Reviews-Hotel_Splendid_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "general"
+    },
+    "Canopy by Hilton Cannes": {
+      "date": "août 2025",
+      "summary": "Un avis signale une porte coulissante de salle de bains qui ne ferme pas ; des retours plus récents apprécient les chambres.",
+      "opportunity": "Faire vérifier le rail ou l'ajustement de cette porte avant d'envisager une intervention.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d228702-Reviews-Canopy_By_Hilton_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "direct"
+    },
+    "Hollywood Hotel Cannes": {
+      "date": "juin 2025",
+      "summary": "Un avis mentionne de l'humidité dans une chambre ; le nom de la fiche Tripadvisor reprend l'ancienne enseigne Kyriad, avec réponse de la direction Hollywood Hotel Cannes.",
+      "opportunity": "Faire diagnostiquer d'abord la source de l'humidité ; ne pas proposer de simple retouche sans traitement.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d293578-Reviews-Hotel_Kyriad_Cannes_Mandelieu-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_A.html",
+      "level": "technical"
+    },
+    "Charlie's Hôtel Cannes": {
+      "date": "février 2026",
+      "summary": "Un avis décrit un matelas affaissé. Le problème relève de la literie à remplacer ou réparer, sans signal sur les finitions de chambre.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d27147749-Reviews-Charlie_s_Hotel_Cannes-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "technical"
+    },
+    "Hôtel Lepoussin Cannes": {
+      "date": "août 2026",
+      "summary": "Un avis apprécie le design rétro et l'espace de la chambre et de la salle de bains ; aucun défaut de surface n'est décrit.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d34246704-Reviews-Hotel_Lepoussin-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "neutral"
     },
     "Hôtel Cannes Montfleury": {
       "date": "mai 2024",
@@ -37,12 +408,68 @@
       "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d196986-Reviews-Hotel_Cannes_Montfleury-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
       "level": "historical"
     },
-    "Pullman Cannes Mandelieu": {
+    "Hôtel du Cap-Eden-Roc": {
+      "date": "2025-2026",
+      "summary": "Les avis consultés louent le cadre, le design et le service ; les critiques repérées ne documentent pas une finition de chambre abîmée.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187217-d219370-Reviews-Hotel_Du_Cap_Eden_Roc_Oetker_Hotels-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_C.html",
+      "level": "neutral"
+    },
+    "Villa Miraé Cap d’Antibes": {
+      "date": "2026",
+      "summary": "Un avis apprécie le design de l'établissement ; aucun dommage de surface précis n'est signalé dans le retour consulté.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g23151408-d219914-Reviews-Cap_D_Antibes_Villa_Mirae_By_Inwood_Hotels-Cap_d_Antibes_Antibes_French_Riviera_Cote_.html",
+      "level": "neutral"
+    },
+    "Hôtel Belles Rives": {
+      "date": "2026",
+      "summary": "Les avis valorisent le style Art déco ; les réserves consultées portent surtout sur le service ou des goûts de décoration, sans défaut réparable précis.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187229-d219916-Reviews-Hotel_Belles_Rives-Juan_les_Pins_Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote.html",
+      "level": "neutral"
+    },
+    "Hôtel Juana": {
+      "date": "août 2026",
+      "summary": "Un avis trouve les chambres décevantes sans détail de surface suffisamment précis ; le ressenti doit être vérifié sur place.",
+      "opportunity": "Questionner l'état des chambres avant d'imaginer une retouche.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187229-d219919-Reviews-Hotel_Juana-Juan_les_Pins_Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "general"
+    },
+    "AC Hotel Ambassadeur Antibes": {
       "date": "juillet et août 2026",
-      "summary": "Des avis décrivent du mobilier usé et des espaces à rafraîchir. Une réponse de la direction évoque un projet de rénovation en préparation.",
-      "opportunity": "Proposer des retouches localisées compatibles avec le calendrier de rénovation annoncé.",
-      "url": "https://www.tripadvisor.fr/Hotel_Review-g187230-d228811-Reviews-Pullman_Cannes_Mandelieu-Mandelieu_la_Napoule_French_Riviera_Cote_d_Azur_Provence_Alpes.html",
+      "summary": "Des avis jugent les sanitaires de la piscine datés et signalent dans une chambre une étagère de verre mal fixée, à risque de sécurité.",
+      "opportunity": "Faire sécuriser l'étagère en priorité ; examiner ensuite les finitions concernées.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187229-d229690-Reviews-Ac_Hotel_Ambassadeur_Antibes_Juan_Les_Pins-Juan_les_Pins_Antibes_French_Riviera_Cote_d_.html",
       "level": "direct"
+    },
+    "Royal Antibes Hotel": {
+      "date": "mai 2026",
+      "summary": "Un avis décrit une chambre agréable et propre ; aucun défaut matériel précis n'est identifié.",
+      "opportunity": "",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187217-d1644868-Reviews-Royal_Antibes_Luxury_Hotel_Residence_Beach_Spa-Antibes_French_Riviera_Cote_d_Azur_Prov.html",
+      "level": "neutral"
+    },
+    "Thalazur Antibes – Baie des Anges": {
+      "date": "août 2026",
+      "summary": "La fiche Tripadvisor « Résidence & Spa » cite aussi l'ancien nom Hôtel Baie des Anges. Un avis décrit une peinture mal finie et un canapé usé ; la partie hébergement concernée doit être confirmée.",
+      "opportunity": "Vérifier le bâtiment et la chambre de l'avis avant d'évaluer peinture et mobilier.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187217-d228812-Reviews-Thalazur_Antibes_Residence_Spa-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d.html",
+      "level": "direct"
+    },
+    "Mercure Antibes Sophia Antipolis": {
+      "date": "juillet 2024",
+      "summary": "Un avis ancien trouve une chambre confortable mais un peu vieillotte ; aucun défaut ponctuel de surface n'est décrit.",
+      "opportunity": "Vérifier si cette perception s'applique encore aux chambres actuelles.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187244-d307961-Reviews-Hotel_Mercure_Antibes_Sophia_Antipolis-Valbonne_French_Riviera_Cote_d_Azur_Provence_Alp.html",
+      "level": "historical"
+    },
+    "ibis Antibes Sophia Antipolis": {
+      "date": "mars 2026",
+      "summary": "Un avis trouve l'hôtel âgé et estime qu'un rafraîchissement serait utile ; un autre souligne des améliorations continues et l'accueil.",
+      "opportunity": "Demander quelles zones restent à améliorer avant de proposer des retouches.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187244-d197328-Reviews-Ibis_Antibes_Sophia_Antipolis-Valbonne_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d.html",
+      "level": "general"
     },
     "Novotel Antibes Sophia Antipolis": {
       "date": "juin 2026",
