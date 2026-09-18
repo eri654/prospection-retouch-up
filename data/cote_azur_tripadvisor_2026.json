@@ -1,0 +1,55 @@
+{
+  "observedAt": "2026-09-18",
+  "method": "Synthèse sélective d'avis de voyageurs Tripadvisor. Un avis est un signal à vérifier sur place, pas un diagnostic de l'hôtel ni une affirmation de besoin actuel.",
+  "hotels": {
+    "AC Hotel Nice": {
+      "date": "juillet 2026",
+      "summary": "Un avis décrit de la peinture et du mobilier abîmés dans une chambre.",
+      "opportunity": "Proposer une inspection ciblée des finitions et du mobilier, puis des retouches sur site si les défauts persistent.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d231038-Reviews-AC_Hotel_Nice-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "direct"
+    },
+    "Mercure Nice Promenade des Anglais": {
+      "date": "mai et octobre 2025",
+      "summary": "Des avis jugent les chambres et salles de bains vieillissantes ; l'un décrit une chambre délabrée.",
+      "opportunity": "Vérifier sur place l'état des surfaces et du mobilier avant de proposer des retouches localisées.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197190-Reviews-Mercure_Nice_Promenade_des_Anglais-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_.html",
+      "level": "general"
+    },
+    "Splendid Hotel & Spa Nice": {
+      "date": "avril et juin 2026",
+      "summary": "Un avis signale la réception à rafraîchir ; un autre décrit papier peint taché d'eau et tapis déchirés dans une chambre. Il indique aussi avoir obtenu une chambre rénovée.",
+      "opportunity": "Examiner les finitions de la réception et les chambres non rénovées ; distinguer retouche ponctuelle et travaux plus lourds.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187234-d197180-Reviews-Splendid_Hotel_Spa_Nice_Cote_d_Azur-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote.html",
+      "level": "direct"
+    },
+    "Eden Hôtel & Spa": {
+      "date": "août 2026",
+      "summary": "Un avis récent décrit des chambres vétustes et abîmées ; d'autres avis récents sont positifs.",
+      "opportunity": "Demander si certaines chambres ont des marques ou éclats réparables avant remplacement.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d275265-Reviews-Eden_Hotel_Spa-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "general"
+    },
+    "Hôtel Cannes Montfleury": {
+      "date": "mai 2024",
+      "summary": "Un avis ancien mentionne du mobilier usé et une chambre vétuste. Son ancienneté impose une vérification sur place.",
+      "opportunity": "Vérifier l'état actuel des meubles et finitions avant toute proposition.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187221-d196986-Reviews-Hotel_Cannes_Montfleury-Cannes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+      "level": "historical"
+    },
+    "Pullman Cannes Mandelieu": {
+      "date": "juillet et août 2026",
+      "summary": "Des avis décrivent du mobilier usé et des espaces à rafraîchir. Une réponse de la direction évoque un projet de rénovation en préparation.",
+      "opportunity": "Proposer des retouches localisées compatibles avec le calendrier de rénovation annoncé.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187230-d228811-Reviews-Pullman_Cannes_Mandelieu-Mandelieu_la_Napoule_French_Riviera_Cote_d_Azur_Provence_Alpes.html",
+      "level": "direct"
+    },
+    "Novotel Antibes Sophia Antipolis": {
+      "date": "juin 2026",
+      "summary": "Des avis décrivent des chambres usées et des salles de bains vieillissantes ; l'un estime qu'une rénovation est nécessaire.",
+      "opportunity": "Repérer les défauts de surfaces réparables et les distinguer des équipements à remplacer.",
+      "url": "https://www.tripadvisor.fr/Hotel_Review-g187244-d197325-Reviews-Novotel_Antibes_Sophia_Antipolis-Valbonne_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot.html",
+      "level": "general"
+    }
+  }
+}

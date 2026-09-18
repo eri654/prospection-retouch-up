@@ -1,84 +1,116 @@
-"""Render the single autonomous Côte d'Azur sheet and legacy redirects."""
+"""Render one autonomous Côte d'Azur prospecting sheet using the Paris visual model."""
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/cote_azur_complete_2026.json").read_text(encoding="utf-8"))
+TRIP = json.loads((ROOT / "data/cote_azur_tripadvisor_2026.json").read_text(encoding="utf-8"))
+PARIS = (ROOT / "paris_equiphotel_2026.html").read_text(encoding="utf-8")
+PARIS_CSS = re.findall(r"<style[^>]*>(.*?)</style>", PARIS, re.S)[-1]
 
-HTML = '''<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Feuille de route Côte d'Azur · Retouch'Up</title>
-  <style>
-    :root{--blue:#1155cc;--navy:#0a3a8a;--bg:#cfe2ff;--row:#e8f0fe;--alt:#d2e3fc;--text:#1c2b4a;--muted:#5f6b7a;--border:#a8c0e8;--edit:#fffde5}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:12px/1.45 Inter,system-ui,sans-serif}a{color:#0a4db5}button,input,textarea{font:inherit}button{cursor:pointer}
-    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #fbbc04;outline-offset:2px}
-    header{background:var(--navy);color:#fff;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}header h1{margin:0 0 3px;font-size:18px}header p{margin:0;opacity:.84;font-size:11px}header a{color:#fff;font-weight:700}
-    .stats{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px;background:#f5f8ff;border-bottom:1px solid var(--border)}.stat{padding:7px 10px;border-radius:6px;background:#e8f0fe;font-weight:700}.stat strong{font-size:14px;color:var(--navy)}
-    .filters{display:flex;gap:7px;align-items:center;flex-wrap:wrap;padding:9px 16px;background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:4}.fb{border:1px solid #7baee4;background:#fff;color:var(--text);border-radius:5px;padding:5px 9px;font-weight:700}.fb.active{background:var(--blue);border-color:var(--blue);color:#fff}.filters input{border:1px solid #7baee4;border-radius:5px;padding:6px 9px;min-width:200px;flex:1;max-width:400px}
-    .notice{margin:0;padding:10px 16px;background:#fff3cd;color:#584300;border-bottom:1px solid #e7d485}.jump{padding:10px 16px;background:#f5f8ff;display:flex;gap:16px;font-weight:700}.jump a{text-decoration:none}.jump a:hover{text-decoration:underline}
-    main{padding:0 0 30px}section{scroll-margin-top:60px}h2{font-size:16px;padding:15px 16px 4px;margin:0;color:var(--navy)}.section-note{padding:0 16px 9px;margin:0;color:var(--muted)}.section-count{padding:6px 16px;background:#f5f8ff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-weight:700}
-    .tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;background:#fff}#hotel-table{min-width:1050px}#contact-table{min-width:1180px}thead{background:var(--blue);color:#fff}th{text-align:left;padding:9px;font-size:10px;letter-spacing:.05em;text-transform:uppercase}td{padding:8px 9px;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}tbody tr:nth-child(odd){background:var(--row)}tbody tr:nth-child(even){background:var(--alt)}tbody tr[hidden]{display:none}.name{font-weight:750;font-size:12px}.sub{font-size:10.5px;color:var(--muted);margin-top:3px}.badges{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}.badge{font-size:10px;font-weight:700;border-radius:4px;padding:2px 6px;background:#e7f0ff;color:#0a3a8a}.badge.generic{background:#ece7f7;color:#543b85}.badge.uncertain{background:#fff2df;color:#865000}
-    .links{display:inline-flex;gap:4px;margin-left:4px;vertical-align:middle}.icon{display:inline-block;border-radius:4px;text-decoration:none;padding:2px 6px;font-weight:800}.in{background:#0a66c2;color:#fff}.map{background:#fff;color:#d93025;border:1px solid var(--border)}.fallback{background:#fff8ef;color:#8a4a08;border:1px dashed #bc7e33}.hs{background:#ff7a59;color:#1c2b4a}.source{display:inline-block;margin-top:5px;font-size:10px}.address{margin-top:4px;color:var(--muted)}.empty{font-style:italic;color:var(--muted)}
-    .check{width:16px;height:16px;accent-color:#188038}.done{opacity:.6}textarea{width:100%;min-height:50px;resize:vertical;padding:6px;background:var(--edit);border:1px solid var(--border);border-radius:4px;color:var(--text)}input[type=date]{width:100%;max-width:145px;padding:5px;border:1px solid var(--border);border-radius:4px;background:var(--edit)}.foot{padding:12px 16px;color:var(--muted);font-size:11px}
-    @media(max-width:720px){header h1{font-size:16px}.stats{gap:5px}.stat{flex:1;min-width:120px}.filters{position:static}.notice{line-height:1.5}}
-    @media print{.filters{position:static}.tablewrap{overflow:visible}table{min-width:0!important}.jump{display:none}}
-  </style>
-</head>
-<body>
-<header><div><h1>Feuille de route terrain — Côte d'Azur</h1><p>Nice · Cannes · Antibes · hôtels génériques · Retouch'Up · relevé du 18 septembre 2026</p></div><a href="index.html">Toutes les feuilles</a></header>
-<div class="stats"><div class="stat"><strong id="hotel-total"></strong> hôtels vérifiés</div><div class="stat"><strong id="person-total"></strong> personnes nommées</div><div class="stat"><strong id="establishment-total"></strong> fiches établissement</div><div class="stat"><strong id="membership-total"></strong> inscriptions dans les 4 listes</div></div>
-<div class="filters"><button type="button" class="fb active" data-city="all">Tout</button><button type="button" class="fb" data-city="nice">Nice (62)</button><button type="button" class="fb" data-city="cannes">Cannes (47)</button><button type="button" class="fb" data-city="antibes">Antibes (11)</button><button type="button" class="fb" data-city="hotels">Hôtels génériques (99)</button><input id="search" type="search" placeholder="Chercher un hôtel, une personne ou une fonction" aria-label="Rechercher dans la feuille"></div>
-<p class="notice">Inventaire des quatre campagnes : une fiche présente dans plusieurs listes apparaît une seule fois, avec toutes ses origines. Un rattachement « à confirmer » ne constitue pas une visite planifiée. Vérifier la fiche CRM avant toute prise de contact. Coches, dates et notes restent uniquement dans ce navigateur : elles ne se synchronisent pas.</p>
-<nav class="jump"><a href="#hotels">Hôtels et itinéraire</a><a href="#contacts">Toutes les fiches des campagnes</a></nav>
-<main>
-  <section id="hotels"><h2>Hôtels et itinéraire</h2><p class="section-note">Adresses sourcées, organisées par zone. Les dates et résultats sont à remplir sur place. La liste des 156 fiches est juste après.</p><div id="hotel-count" class="section-count" aria-live="polite"></div><div class="tablewrap"><table id="hotel-table"><thead><tr><th>✓</th><th>Zone</th><th>Établissement</th><th>Adresse et accès</th><th>Date</th><th>Angle d’approche</th><th>Résultat de visite</th><th>Prochaine étape</th></tr></thead><tbody id="hotel-body"></tbody></table></div></section>
-  <section id="contacts"><h2>Toutes les fiches des quatre campagnes</h2><p class="section-note">144 personnes et 12 fiches d’hôtel sans personne nommée ; 219 inscriptions regroupées en 156 fiches distinctes. Les liens « ? » ouvrent une recherche à vérifier.</p><div id="contact-count" class="section-count" aria-live="polite"></div><div class="tablewrap"><table id="contact-table"><thead><tr><th>✓</th><th>Personne ou fiche hôtel</th><th>Listes d’origine</th><th>Établissement indiqué</th><th>Fonction</th><th>LinkedIn</th><th>HubSpot</th><th>Note terrain</th><th>Prochaine étape</th></tr></thead><tbody id="contact-body"></tbody></table></div></section>
-</main>
-<p class="foot">Sources : feuille de prospection Côte d'Azur, quatre campagnes et portail HubSpot Retouch'Up. Les adresses des hôtels renvoient vers les sites des établissements. La page ne publie aucun e-mail nominatif, numéro mobile ou commande de campagne.</p>
+CSS = PARIS_CSS + r"""
+body{font-size:12px}button,input,textarea{font:inherit}
+.topbar{min-height:48px;height:auto;padding-top:7px;padding-bottom:7px}
+.filter-bar{top:48px;align-items:center}.filter-bar input{min-width:180px;flex:1;max-width:400px;border:1.5px solid var(--border-h);border-radius:4px;background:var(--surface);color:var(--text);padding:5px 8px;font-size:11px}
+.count-bar{padding:7px 16px;background:var(--surface);border-bottom:1px solid var(--border);font-size:11px;font-weight:700}
+.table-wrap{padding-bottom:15px}table{min-width:1800px}thead th{position:static}
+.review-cell{min-width:235px;max-width:280px;vertical-align:top}.review-badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:9px;font-weight:800;margin-bottom:4px}.review-badge.direct{background:#fce4dc;color:#9c361c}.review-badge.general{background:#fff0c7;color:#785307}.review-badge.historical{background:#e8e9ee;color:#4e5361}.review-badge.none{background:#edf1f3;color:#56616b}.review-summary{font-size:10px;line-height:1.4}.review-opportunity{font-size:10px;margin-top:4px;color:var(--navy-dark)}.review-date{font-size:9px;color:var(--muted);margin-top:4px}
+.hotel-name{font-weight:750;font-size:12px}.hotel-address{color:var(--muted);margin-top:3px;font-size:10px}.hotel-source{font-size:10px;margin-top:5px;display:inline-block}
+.small-note{font-size:10px;color:var(--muted);margin-top:3px}.origin-tags{display:flex;gap:3px;flex-wrap:wrap}.origin-tag{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:#e7f0ff;color:#0a3a8a}.origin-tag.generic{background:#ece7f7;color:#543b85}
+.contact-item{padding:4px 0 4px 6px}.contact-head{display:flex;align-items:flex-start;gap:4px}.contact-check{width:15px;height:15px;accent-color:#188038;flex:none;margin-top:2px}.contact-name{font-weight:700}.contact-fn{font-size:10px}.contact-proof{font-size:9px;color:var(--muted);margin-top:2px}
+.proof-link{display:inline-block;margin-top:3px;color:var(--navy);font-size:10px;font-weight:700}.fallback{border:1px dashed #bd8b44!important;background:#fff8ef!important;color:#7b4b0a!important}.icon-link.linkedin.fallback{color:#7b4b0a}
+.status-pill.s-qual{background:#9aa0a6;color:#fff}.row-done{opacity:.62}.section-title{padding:12px 16px 5px;background:var(--bg);font-size:14px;color:var(--navy-dark)}.section-intro{padding:0 16px 9px;color:var(--muted);font-size:11px;background:var(--bg)}
+.edit-date{width:120px;max-width:100%;background:var(--edit-bg);color:var(--text);border:1px solid var(--border);padding:4px;font-size:10px}.plain-check{width:16px;height:16px;accent-color:#188038}.editable-col .note-cell{min-height:50px}
+.source-proof{display:block;font-size:10px;margin:3px 0}.source-proof em{font-style:normal;color:var(--muted)}.blank{color:var(--muted);font-style:italic}.priority-explain{font-size:10px;color:var(--muted)}
+.annex-table{min-width:1120px}.annex-table th{position:static}.annex-table td{padding:7px 9px}.annex-table .note-cell{min-height:42px}.annex-table tr[data-hidden]{display:none}
+.footer{padding:16px;background:var(--bg);font-size:10px;color:var(--muted)}
+@media(max-width:760px){.topbar{position:relative}.filter-bar{position:relative;top:0}.topbar-stats{width:100%}.filter-bar input{max-width:none;width:100%}.legend-bar{gap:8px}.table-wrap{overflow-x:auto}thead th{position:static}}
+@media print{.topbar,.filter-bar{position:relative;top:0}.table-wrap{overflow:visible}table{min-width:0}.annex-table{min-width:0}textarea{border:0}}
+"""
+
+HTML = r'''<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Feuille de route terrain — Côte d’Azur · Retouch’Up</title><style>__CSS__</style></head><body>
+<div class="topbar"><div><div class="topbar-title">Suivi Prospection Terrain — Nice · Cannes · Antibes</div><div class="topbar-sub">Retouch’Up · une feuille pour les quatre campagnes · relevé du 18 septembre 2026</div></div><div class="topbar-stats"><span class="tstat ts-p2" id="stat-hotels"></span><span class="tstat ts-p3" id="stat-people"></span><span class="tstat ts-ae" id="stat-campaigns"></span></div></div>
+<div class="filter-bar" role="group" aria-label="Filtres de la feuille"><button class="fb active" data-f="all">Tous les hôtels</button><button class="fb" data-f="P2">P2 · contact décisionnaire</button><button class="fb" data-f="P3">P3 · contact identifié</button><button class="fb" data-f="Qual">À qualifier</button><button class="fb" data-f="nice">Nice</button><button class="fb" data-f="cannes">Cannes</button><button class="fb" data-f="antibes">Antibes</button><button class="fb" data-f="annex">Autres fiches</button><input id="search" type="search" aria-label="Rechercher hôtel ou contact" placeholder="Rechercher hôtel, personne, fonction..."></div>
+<p class="privacy-note">Les coches, dates, priorités et notes restent sur cet appareil : elles ne se synchronisent pas entre personnes. Les liens « ? » ouvrent une recherche à vérifier. Aucun numéro mobile n’est publié.</p>
+<div class="legend-bar"><strong>Comme la feuille Paris :</strong><span class="leg-item">✓ hôtel et personne</span><span class="leg-item">P2 = direction ou technique identifiée</span><span class="leg-item">P3 = autre contact identifié</span><span class="leg-item">À qualifier = hôtel sans contact rattaché</span><span class="leg-item">Avis Tripadvisor = témoignage daté, à vérifier sur place</span><span class="leg-item">✏️ jaune = saisie terrain</span><span class="leg-item">Priorité = clic pour modifier sur cet appareil</span></div>
+<div class="count-bar" id="main-count"></div>
+<div class="table-wrap"><table id="main-table"><thead><tr><th style="width:36px">✓</th><th style="width:90px">Priorité</th><th style="width:155px">Établissement</th><th style="width:75px">Secteur</th><th style="width:180px">Contact principal</th><th style="width:215px">Tous contacts sur place</th><th style="width:110px">Campagnes</th><th style="width:180px">Rattachement & preuve</th><th style="width:245px">Avis Tripadvisor & signal Retouch’Up</th><th style="width:160px">Adresse & accès</th><th style="width:115px">Date</th><th class="editable-col" style="width:150px">✏️ Angle d’approche</th><th class="editable-col" style="width:160px">✏️ Résultat de visite</th><th class="editable-col" style="width:150px">✏️ Prochaine étape</th></tr></thead><tbody id="tbody"></tbody></table></div>
+<h2 class="section-title" id="autres">Autres fiches des quatre campagnes</h2><p class="section-intro">Personnes liées à un groupe, hors secteur ou dont l’établissement actuel n’est pas identifiable. Elles restent visibles dans la même feuille ; aucune visite d’hôtel ne leur est attribuée automatiquement.</p><div class="count-bar" id="annex-count"></div>
+<div class="table-wrap"><table class="annex-table"><thead><tr><th>✓</th><th>Origine</th><th>Personne</th><th>Hôtel / organisation</th><th>Fonction</th><th>Preuve</th><th>LinkedIn</th><th>HubSpot</th><th>✏️ Note terrain</th><th>✏️ Prochaine étape</th></tr></thead><tbody id="annex-body"></tbody></table></div>
+<p class="footer">Sources des adresses : sites officiels des hôtels ou annuaire public. Rattachements : profils et publications LinkedIn, documents de prospection et fiches CRM signalés dans chaque ligne. Avis Tripadvisor : synthèse sélective au 18 septembre 2026 ; chaque avis reflète l'expérience d'un voyageur et doit être revalidé avant prospection. Les prestations possibles renvoient à <a href="https://retouch-up.fr/" target="_blank" rel="noopener noreferrer">Retouch’Up</a>. 156 fiches distinctes, dont 122 personnes et 34 fiches d’établissement ; 219 inscriptions dans les quatre campagnes. Les personnes présentes dans deux hôtels sont affichées dans chacun des deux parcours. <a href="index.html">Toutes les feuilles</a>.</p>
 <script>
 const DATA=__DATA__;
+const TRIP=__TRIP__;
 const HOTELS=Object.entries(DATA.hotels).flatMap(([city,rows])=>rows.map(h=>({...h,city})));
 const RECORDS=DATA.records;
-const LABELS={nice:'Nice',cannes:'Cannes',antibes:'Antibes',hotels:'Hôtels génériques'};
-const KEY='retouchup_cote_azur_complete_2026_v1';let saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const CITY={nice:'Nice',cannes:'Cannes',antibes:'Antibes',hotels:'Hôtels génériques'};
+const ORDER=['nice','cannes','antibes'];
+const KEY='retouchup_cote_azur_complete_2026_v1';
+let state={};try{state=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const enc=encodeURIComponent;
-const link=(url,title,display,cls='')=>'<a class="'+cls+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(title)+'" aria-label="'+esc(title)+'">'+display+'</a>';
+const link=(url,label,display,cls='')=>'<a class="'+cls+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(label)+'" aria-label="'+esc(label)+'">'+display+'</a>';
+const liSearch=(name,type='companies')=>'https://www.linkedin.com/search/results/'+type+'/?keywords='+enc(name);
 const hsSearch=name=>'https://app.hubspot.com/contacts/19495777/objects/0-1/views/all/list?query='+enc(name);
-const liSearch=(name,type)=>'https://www.linkedin.com/search/results/'+type+'/?keywords='+enc(name);
 const maps=h=>'https://www.google.com/maps/search/?api=1&query='+enc(h.name+', '+h.address);
-function hotelLi(h){const p=h.contacts.find(c=>c.linkedin);return p?link(p.linkedin,'Profil LinkedIn de '+p.name+', personne associée à '+h.name,'in','icon in'):link(liSearch(h.name,'companies'),'Recherche LinkedIn de '+h.name+' ; page officielle non vérifiée','in ?','icon in fallback')}
-function recordLi(r){return r.linkedin?link(r.linkedin,'Profil LinkedIn enregistré pour '+r.name+' ; identité à revérifier','in','icon in'):link(liSearch(r.name,r.kind==='person'?'people':'companies'),'Recherche LinkedIn de '+r.name+' ; profil non vérifié','in ?','icon in fallback')}
-function recordHs(r){return r.hubspotId?link('https://app.hubspot.com/contacts/19495777/record/0-1/'+enc(r.hubspotId),'Fiche HubSpot correspondant à '+r.name,'HubSpot','icon hs'):link(hsSearch(r.name),'Rechercher '+r.name+' dans HubSpot ; fiche directe non vérifiée','HubSpot ?','icon hs fallback')}
-const hb=document.getElementById('hotel-body');
-HOTELS.forEach(h=>{const id='h_'+h.city+'_'+h.name;const tr=document.createElement('tr');tr.dataset.city=h.city;tr.dataset.search=(h.name+' '+h.address+' '+h.city).toLocaleLowerCase('fr');tr.innerHTML='<td><input class="check" type="checkbox" data-save="'+esc(id+'_done')+'" aria-label="Visite '+esc(h.name)+' effectuée" '+(saved[id+'_done']?'checked':'')+'></td><td><span class="badge">'+esc(LABELS[h.city])+'</span><div class="sub">'+esc(h.sector)+'</div></td><td class="name">'+esc(h.name)+'</td><td><div class="address">'+esc(h.address)+'</div><span class="links">'+hotelLi(h)+link(maps(h),'Recherche Google Maps : '+h.name+', '+h.address,'📍','icon map')+'</span><br>'+link(h.source,'Site de '+h.name+' : source de l’adresse','Source / adresse','source')+'</td><td><input type="date" data-save="'+esc(id+'_date')+'" aria-label="Date de visite : '+esc(h.name)+'" value="'+esc(saved[id+'_date']||'')+'"></td>'+['angle','result','next'].map(k=>'<td><textarea data-save="'+esc(id+'_'+k)+'" aria-label="'+esc(k+' : '+h.name)+'" placeholder="À remplir">'+esc(saved[id+'_'+k]||'')+'</textarea></td>').join('');if(saved[id+'_done'])tr.classList.add('done');hb.appendChild(tr)});
-const cb=document.getElementById('contact-body');
-RECORDS.forEach(r=>{const id='c_'+r.key;const tr=document.createElement('tr');tr.dataset.origins=r.origins.join(' ');tr.dataset.search=(r.name+' '+r.role+' '+r.association+' '+r.origins.map(o=>LABELS[o]).join(' ')).toLocaleLowerCase('fr');const origins=r.origins.map(o=>'<span class="badge '+(o==='hotels'?'generic':'')+'">'+esc(LABELS[o])+'</span>').join('');const assoc=r.association?'<div>'+esc(r.association)+'</div><div class="sub">'+esc(r.associationLabel)+'</div>':'<span class="badge uncertain">À confirmer</span>';tr.innerHTML='<td><input class="check" type="checkbox" data-save="'+id+'_done" aria-label="Fiche '+esc(r.name)+' traitée" '+(saved[id+'_done']?'checked':'')+'></td><td><span class="name">'+esc(r.name)+'</span>'+(r.kind==='hotel_record'?'<div class="sub">Sans personne nommée</div>':'')+'</td><td><div class="badges">'+origins+'</div></td><td>'+assoc+'</td><td>'+esc(r.role)+'</td><td>'+recordLi(r)+'</td><td>'+recordHs(r)+'</td><td><textarea data-save="'+id+'_note" aria-label="Note terrain : '+esc(r.name)+'" placeholder="Observation">'+esc(saved[id+'_note']||'')+'</textarea></td><td><textarea data-save="'+id+'_next" aria-label="Prochaine étape : '+esc(r.name)+'" placeholder="À définir">'+esc(saved[id+'_next']||'')+'</textarea></td>';if(saved[id+'_done'])tr.classList.add('done');cb.appendChild(tr)});
-document.getElementById('hotel-total').textContent=HOTELS.length;
-document.getElementById('person-total').textContent=RECORDS.filter(r=>r.kind==='person').length;
-document.getElementById('establishment-total').textContent=RECORDS.filter(r=>r.kind==='hotel_record').length;
-document.getElementById('membership-total').textContent=DATA.campaigns.reduce((n,c)=>n+c.memberships,0);
-function save(){try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}}
-document.querySelectorAll('tbody').forEach(body=>{body.addEventListener('input',e=>{const k=e.target.dataset.save;if(!k)return;saved[k]=e.target.type==='checkbox'?e.target.checked:e.target.value;if(k.endsWith('_done'))e.target.closest('tr').classList.toggle('done',e.target.checked);save()});body.addEventListener('change',e=>{if(e.target.type==='checkbox')e.target.dispatchEvent(new Event('input',{bubbles:true}))})});
-let city=new URLSearchParams(location.search).get('zone')||'all';if(!LABELS[city])city='all';
-function selectCity(value){city=value;document.querySelectorAll('.fb').forEach(b=>b.classList.toggle('active',b.dataset.city===city));applyFilter()}
-document.querySelectorAll('.fb').forEach(b=>b.addEventListener('click',()=>selectCity(b.dataset.city)));
-document.getElementById('search').addEventListener('input',applyFilter);
-function applyFilter(){const q=document.getElementById('search').value.trim().toLocaleLowerCase('fr');let hc=0,rc=0;[...hb.children].forEach(row=>{const show=(city==='all'||row.dataset.city===city)&&(!q||row.dataset.search.includes(q));row.hidden=!show;if(show)hc++});[...cb.children].forEach(row=>{const show=(city==='all'||row.dataset.origins.split(' ').includes(city))&&(!q||row.dataset.search.includes(q));row.hidden=!show;if(show)rc++});document.getElementById('hotel-count').textContent=hc+' / '+HOTELS.length+' hôtels affichés';document.getElementById('contact-count').textContent=rc+' / '+RECORDS.length+' fiches affichées'}
-selectCity(city);
-</script>
-</body>
-</html>
-'''
+const hs=r=>r.hubspotId?link('https://app.hubspot.com/contacts/19495777/record/0-1/'+enc(r.hubspotId),'Fiche HubSpot de '+r.name,'HubSpot','hubspot-link'):link(hsSearch(r.name),'Recherche HubSpot de '+r.name+' ; fiche directe non vérifiée','HubSpot ?','hubspot-link search fallback');
+const li=r=>r.linkedin?link(r.linkedin,'Profil LinkedIn enregistré pour '+r.name,'in','icon-link linkedin'):link(liSearch(r.name,'people'),'Recherche LinkedIn ; profil personnel non vérifié pour '+r.name,'in ?','icon-link linkedin fallback');
+function hotelLi(h,people){const r=people.find(p=>p.linkedin);return r?link(r.linkedin,'Profil LinkedIn de '+r.name+' associé à '+h.name,'in','icon-link linkedin'):link(liSearch(h.name),'Recherche LinkedIn de '+h.name+' ; page officielle non vérifiée','in ?','icon-link linkedin fallback')}
+function origins(rs){const all=[...new Set(rs.flatMap(r=>r.origins))];return all.map(o=>'<span class="origin-tag '+(o==='hotels'?'generic':'')+'">'+esc(CITY[o])+'</span>').join('')}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+const byHotel=new Map(HOTELS.map(h=>[h.name,[]]));
+RECORDS.forEach(r=>r.hotelNames.forEach(name=>{if(byHotel.has(name))byHotel.get(name).push(r)}));
+function rank(r){const role=r.role.toLowerCase();if(/directeur|directrice|direction|g[eé]n[eé]ral|technique|maintenance/.test(role))return 3;if(/gouvernante|housekeeping|exploitation|op[eé]ration/.test(role))return 2;return 1}
+function defaultStatus(rs){const people=rs.filter(r=>r.kind==='person'&&!r.associationLabel.includes('non concluant'));if(people.some(r=>rank(r)>=2))return 'P2';return people.length?'P3':'Qual'}
+function contact(r,check=true){const id='c_'+r.key;return '<div class="contact-item"><div class="contact-head">'+(check?'<input type="checkbox" class="contact-check" data-save="'+id+'_done" aria-label="Contact '+esc(r.name)+' traité" '+(state[id+'_done']?'checked':'')+'>':'')+'<div><span class="contact-name">'+esc(r.name)+'</span><span class="inline-links">'+li(r)+'</span><span class="contact-fn">'+esc(r.role)+'</span>'+hs(r)+'</div></div></div>'}
+function proof(r){const label=esc(r.associationLabel);return '<div class="source-proof"><strong>'+esc(r.name)+'</strong> · <em>'+label+'</em>'+(r.associationSource?' '+link(r.associationSource,'Source du rattachement de '+r.name,'Source ↗','proof-link'):'')+'</div>'}
+function review(h){const r=TRIP.hotels[h.name];if(!r){const url='https://www.tripadvisor.fr/Search?q='+enc(h.name+' '+CITY[h.city]);return '<td class="review-cell"><span class="review-badge none">Pas de signal sourcé</span><div class="review-summary">Aucun résumé d’avis matériel sourcé dans cette feuille. Vérifier les avis avant visite.</div>'+link(url,'Rechercher les avis Tripadvisor de '+h.name,'Recherche Tripadvisor ↗','proof-link')+'</td>'}const badge=r.level==='historical'?'Avis ancien à revalider':r.level==='direct'?'Défaut matériel décrit':'Rafraîchissement évoqué';return '<td class="review-cell"><span class="review-badge '+esc(r.level)+'">'+badge+'</span><div class="review-summary">'+esc(r.summary)+'</div><div class="review-opportunity"><strong>Angle Retouch’Up :</strong> '+esc(r.opportunity)+'</div><div class="review-date">Avis : '+esc(r.date)+'</div>'+link(r.url,'Lire les avis Tripadvisor de '+h.name,'Voir les avis ↗','proof-link')+'</td>'}
+const tbody=document.getElementById('tbody');
+ORDER.forEach((city,ci)=>{
+  const sep=document.createElement('tr');sep.className='day-sep';sep.dataset.city=city;sep.innerHTML='<td colspan="14">Étape '+(ci+1)+' · '+CITY[city]+' · dates de passage à fixer</td>';tbody.appendChild(sep);
+  HOTELS.filter(h=>h.city===city).forEach(h=>{
+    const records=byHotel.get(h.name)||[];const people=records.filter(r=>r.kind==='person').sort((a,b)=>rank(b)-rank(a)||a.name.localeCompare(b.name,'fr'));const main=people[0];
+    const id='h_'+h.city+'_'+h.name;const prio=state[id+'_prio']||defaultStatus(records);const row=document.createElement('tr');row.dataset.city=city;row.dataset.prio=prio;row.dataset.search=(h.name+' '+h.address+' '+h.sector+' '+(TRIP.hotels[h.name]?.summary||'')+' '+records.map(r=>r.name+' '+r.role+' '+r.association+' '+r.origins.join(' ')).join(' ')).toLocaleLowerCase('fr');row.dataset.key=id;
+    const hotelBadge=records.filter(r=>r.kind==='hotel_record').length;
+    row.innerHTML='<td class="checkbox-col"><input type="checkbox" class="plain-check" data-save="'+esc(id+'_done')+'" aria-label="Visite '+esc(h.name)+' effectuée" '+(state[id+'_done']?'checked':'')+'></td>'+
+      '<td><button type="button" class="status-pill '+(prio==='P2'?'s-p2':prio==='P3'?'s-p3':'s-qual')+'" data-status="'+esc(id)+'" aria-label="Modifier priorité '+esc(h.name)+'">'+(prio==='Qual'?'À qualifier':prio)+'</button></td>'+
+      '<td><div class="hotel-name">'+esc(h.name)+' <span class="inline-links">'+hotelLi(h,people)+link(maps(h),'Ouvrir '+h.name+' dans Google Maps','📍','icon-link maps')+'</span></div><div class="small-note">'+(hotelBadge?hotelBadge+' fiche(s) d’établissement dans les campagnes':'Établissement du parcours')+'</div></td>'+
+      '<td>'+esc(CITY[city])+'<div class="small-note">'+esc(h.sector)+'</div></td>'+
+      '<td>'+(main?contact(main,false):'<span class="blank">Aucun contact rattaché</span>')+'</td>'+
+      '<td><div class="contacts-list">'+(people.length?people.map(contact).join(''):'<span class="blank">À identifier sur place</span>')+'</div></td>'+
+      '<td><div class="origin-tags">'+(records.length?origins(records):'<span class="blank">Prospection terrain</span>')+'</div></td>'+
+      '<td>'+(people.length?people.map(proof).join(''):'<span class="blank">Adresse vérifiée ; contact à identifier</span>')+'</td>'+
+      review(h)+
+      '<td><div class="hotel-address">'+esc(h.address)+'</div>'+link(maps(h),'Itinéraire Google Maps vers '+h.name,'Maps ↗','hotel-source')+' · '+link(h.source,'Source de l’adresse de '+h.name,'Adresse ↗','hotel-source')+'</td>'+
+      '<td class="editable-col"><input type="date" class="edit-date" data-save="'+esc(id+'_date')+'" aria-label="Date de visite '+esc(h.name)+'" value="'+esc(state[id+'_date']||'')+'"></td>'+
+      ['angle','result','next'].map((k,i)=>'<td class="editable-col"><span class="edit-label">'+['Angle d’approche','Résultat de visite','Prochaine étape'][i]+'</span><textarea class="note-cell" data-save="'+esc(id+'_'+k)+'" aria-label="'+['Angle','Résultat','Prochaine étape'][i]+' '+esc(h.name)+'" placeholder="À remplir">'+esc(state[id+'_'+k]||'')+'</textarea></td>').join('');
+    if(state[id+'_done'])row.classList.add('row-done');tbody.appendChild(row);
+  });
+});
+const annex=document.getElementById('annex-body');const unplaced=RECORDS.filter(r=>!r.hotelNames.length);
+unplaced.forEach(r=>{const id='c_'+r.key;const row=document.createElement('tr');row.dataset.origins=r.origins.join(' ');row.dataset.search=(r.name+' '+r.association+' '+r.role+' '+r.origins.join(' ')).toLocaleLowerCase('fr');row.innerHTML='<td><input type="checkbox" class="plain-check" data-save="'+id+'_done" aria-label="Fiche '+esc(r.name)+' traitée" '+(state[id+'_done']?'checked':'')+'></td><td><div class="origin-tags">'+origins([r])+'</div></td><td><strong>'+esc(r.name)+'</strong></td><td>'+(r.association?esc(r.association):'<span class="blank">Établissement non identifié</span>')+'<div class="small-note">'+esc(r.associationLabel)+'</div></td><td>'+esc(r.role)+'</td><td>'+(r.associationSource?link(r.associationSource,'Source pour '+r.name,'Source ↗','proof-link'):'<span class="blank">Document de prospection</span>')+'</td><td>'+li(r)+'</td><td>'+hs(r)+'</td>'+['note','next'].map((k,i)=>'<td class="editable-col"><textarea class="note-cell" data-save="'+id+'_'+k+'" aria-label="'+(i?'Prochaine étape':'Note')+' '+esc(r.name)+'">'+esc(state[id+'_'+k]||'')+'</textarea></td>').join('');if(state[id+'_done'])row.classList.add('row-done');annex.appendChild(row)});
+document.getElementById('stat-hotels').textContent=HOTELS.length+' hôtels';
+document.getElementById('stat-people').textContent=RECORDS.filter(r=>r.kind==='person').length+' personnes · '+RECORDS.filter(r=>r.kind==='hotel_record').length+' fiches hôtel';
+document.getElementById('stat-campaigns').textContent=DATA.campaigns.reduce((n,c)=>n+c.memberships,0)+' inscriptions · 4 campagnes';
+document.querySelectorAll('tbody').forEach(body=>{
+  body.addEventListener('input',e=>{const key=e.target.dataset.save;if(!key)return;state[key]=e.target.type==='checkbox'?e.target.checked:e.target.value;if(e.target.type==='checkbox')e.target.closest('tr').classList.toggle('row-done',e.target.checked);save()});
+  body.addEventListener('change',e=>{if(e.target.type==='checkbox')e.target.dispatchEvent(new Event('input',{bubbles:true}))});
+});
+tbody.addEventListener('click',e=>{const b=e.target.closest('[data-status]');if(!b)return;const key=b.dataset.status+'_prio';const order=['Qual','P3','P2'];const current=state[key]||b.closest('tr').dataset.prio;const next=order[(order.indexOf(current)+1)%order.length];state[key]=next;b.closest('tr').dataset.prio=next;b.className='status-pill '+(next==='P2'?'s-p2':next==='P3'?'s-p3':'s-qual');b.textContent=next==='Qual'?'À qualifier':next;save();applyFilter()});
+let active='all';document.querySelectorAll('.fb[data-f]').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.f;document.querySelectorAll('.fb').forEach(x=>x.classList.toggle('active',x===b));applyFilter()}));document.getElementById('search').addEventListener('input',applyFilter);
+function applyFilter(){const q=document.getElementById('search').value.trim().toLocaleLowerCase('fr');let shown=0;let aux=0;[...tbody.querySelectorAll('tr:not(.day-sep)')].forEach(row=>{const f=active;const show=(f==='all'||f==='annex'?f==='all':f==='P2'||f==='P3'||f==='Qual'?row.dataset.prio===f:row.dataset.city===f)&&(!q||row.dataset.search.includes(q));row.toggleAttribute('data-hidden',!show);if(show)shown++});tbody.querySelectorAll('.day-sep').forEach(sep=>{let next=sep.nextElementSibling;let any=false;while(next&&!next.classList.contains('day-sep')){if(!next.hasAttribute('data-hidden'))any=true;next=next.nextElementSibling}sep.toggleAttribute('data-hidden',!any)});[...annex.children].forEach(row=>{const show=(active==='all'||active==='annex'||['nice','cannes','antibes'].includes(active)&&row.dataset.origins.split(' ').includes(active))&&(!q||row.dataset.search.includes(q));row.toggleAttribute('data-hidden',!show);if(show)aux++});document.getElementById('main-count').textContent=shown+' / '+HOTELS.length+' hôtels affichés';document.getElementById('annex-count').textContent=aux+' / '+unplaced.length+' autres fiches affichées'}
+const zone=new URLSearchParams(location.search).get('zone');if(['nice','cannes','antibes'].includes(zone)){active=zone;document.querySelectorAll('.fb').forEach(b=>b.classList.toggle('active',b.dataset.f===zone))}applyFilter();
+</script></body></html>'''
 
 embedded = json.dumps(DATA, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-(ROOT / "cote_azur_2026.html").write_text(HTML.replace("__DATA__", embedded), encoding="utf-8")
+trip_embedded = json.dumps(TRIP, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+(ROOT / "cote_azur_2026.html").write_text(HTML.replace("__CSS__", CSS).replace("__DATA__", embedded).replace("__TRIP__", trip_embedded), encoding="utf-8")
 for city in ("nice", "cannes", "antibes"):
     target = f"cote_azur_2026.html?zone={city}"
-    redirect = f'''<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url={target}"><title>Feuille Côte d'Azur</title></head><body><p>La feuille de route est réunie sur <a href="{target}">la page Côte d'Azur</a>.</p></body></html>'''
+    redirect = f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url={target}"><title>Feuille Côte d’Azur</title></head><body><p>La feuille de route est réunie sur <a href="{target}">la page Côte d’Azur</a>.</p></body></html>'
     (ROOT / f"{city}_2026.html").write_text(redirect, encoding="utf-8")
-print(f"1 page, {sum(len(v) for v in DATA['hotels'].values())} hôtels, {len(DATA['records'])} fiches, {sum(c['memberships'] for c in DATA['campaigns'])} inscriptions")
+print(f"1 page Paris, {sum(len(v) for v in DATA['hotels'].values())} hôtels, {len(DATA['records'])} fiches, {sum(c['memberships'] for c in DATA['campaigns'])} inscriptions")

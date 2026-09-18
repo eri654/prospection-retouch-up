@@ -1,0 +1,27 @@
+{
+  "nice": [
+    {"name": "Hôtel Posidonia", "address": "49 rue de l'Hôtel des Postes, 06000 Nice", "sector": "Centre", "source": "https://posidonia-hotel.com/fr/", "contacts": []},
+    {"name": "Le Méridien Nice", "address": "1 promenade des Anglais, 06000 Nice", "sector": "Promenade", "source": "https://www.marriott.com/fr/hotels/ncemd-le-meridien-nice/overview/", "contacts": []},
+    {"name": "Mercure Nice Promenade des Anglais", "address": "2 rue Halévy, 06000 Nice", "sector": "Promenade", "source": "https://all.accor.com/hotel/0360/index.fr.shtml", "contacts": []},
+    {"name": "Nice Centre Hotel", "address": "28 avenue Notre-Dame, 06000 Nice", "sector": "Centre", "source": "https://www.marriott.com/fr/hotels/ncetc-nice-centre-hotel/overview/", "contacts": []},
+    {"name": "Holiday Inn Nice Centre", "address": "20 boulevard Victor Hugo, 06000 Nice", "sector": "Centre", "source": "https://www.ihg.com/holidayinn/hotels/fr/fr/nice/ncefr/hoteldetail", "contacts": []},
+    {"name": "Hôtel Le Soleia", "address": "48 boulevard Victor Hugo, 06000 Nice", "sector": "Centre", "source": "https://www.inwood-hotels.com/en/our-hotels/soleia", "contacts": []},
+    {"name": "Hôtel Helvétique", "address": "47 rue de l'Hôtel des Postes, 06000 Nice", "sector": "Centre", "source": "https://www.helvetique.com/contact.htm", "contacts": []},
+    {"name": "Hôtel Khla", "address": "31 rue Paganini, 06000 Nice", "sector": "Gare", "source": "https://www.hotelkhla.com/contact-et-acces", "contacts": []},
+    {"name": "Hôtel Nice Azur Riviera", "address": "19 rue Assalit, 06000 Nice", "sector": "Gare", "source": "https://www.niceazurriviera.com/fr/page/contact-acces.14022.html", "contacts": []},
+    {"name": "Villa Otero by HappyCulture", "address": "58 rue Hérold, 06000 Nice", "sector": "Gare", "source": "https://www.villa-otero.com/fr/", "contacts": []},
+    {"name": "The Deck Hôtel by HappyCulture", "address": "2 rue Maccarani, 06000 Nice", "sector": "Centre", "source": "https://www.deck-hotel.com/fr/", "contacts": []},
+    {"name": "Novotel Nice Arénas Aéroport", "address": "455 promenade des Anglais, 06299 Nice", "sector": "Aéroport", "source": "https://all.accor.com/hotel/0478/index.fr.shtml", "contacts": []},
+    {"name": "Mercure Villeneuve-Loubet Plage", "address": "215 boulevard Éric Tabarly, 06270 Villeneuve-Loubet", "sector": "Littoral ouest", "source": "https://all.accor.com/hotel/A9A2/index.fr.shtml", "contacts": []}
+  ],
+  "cannes": [
+    {"name": "Carlton Cannes", "address": "58 boulevard de la Croisette, 06400 Cannes", "sector": "Croisette", "source": "https://carltoncannes.com/contact/", "contacts": []},
+    {"name": "Mondrian Cannes", "address": "45 boulevard de la Croisette, 06400 Cannes", "sector": "Croisette", "source": "https://mondrianhotels.com/cannes/", "contacts": []},
+    {"name": "Hôtel Splendid Cannes", "address": "4 rue Félix Faure, 06400 Cannes", "sector": "Centre", "source": "https://www.splendid-hotel-cannes.com/fr/contact", "contacts": []},
+    {"name": "Canopy by Hilton Cannes", "address": "2 boulevard Jean Hibert, 06400 Cannes", "sector": "Vieux-Port", "source": "https://www.hilton.com/fr/hotels/ceqcfpy-canopy-cannes/hotel-location/", "contacts": []},
+    {"name": "Hollywood Hotel Cannes", "address": "269 avenue Francis Tonner, 06150 Cannes", "sector": "La Bocca", "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/318083094", "contacts": []},
+    {"name": "Charlie's Hôtel Cannes", "address": "4 rue du Vingt-Quatre Août, 06400 Cannes", "sector": "Centre", "source": "https://www.charlieshotel.fr/fr/contact", "contacts": []},
+    {"name": "Hôtel Lepoussin Cannes", "address": "1 rue Le Poussin, 06400 Cannes", "sector": "Centre", "source": "https://www.lepoussinhotel.com/acces-contact", "contacts": []},
+    {"name": "Hôtel Cannes Montfleury", "address": "25 avenue Beauséjour, 06400 Cannes", "sector": "Montfleury", "source": "https://fr.linkedin.com/company/hotel-cannes-montfleury", "contacts": []}
+  ]
+}
