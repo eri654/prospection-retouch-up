@@ -106,6 +106,19 @@ function applyFilter(){const q=document.getElementById('search').value.trim().to
 const zone=new URLSearchParams(location.search).get('zone');if(['nice','cannes','antibes'].includes(zone)){active=zone;document.querySelectorAll('.fb').forEach(b=>b.classList.toggle('active',b.dataset.f===zone))}applyFilter();
 </script></body></html>'''
 
+local_memberships = sum(len(r["origins"]) for r in DATA["records"])
+source_memberships = sum(c["memberships"] for c in DATA["campaigns"])
+people_count = sum(r["kind"] == "person" for r in DATA["records"])
+hotel_record_count = sum(r["kind"] == "hotel_record" for r in DATA["records"])
+footer_start = HTML.index("124 fiches locales")
+footer_end = HTML.index(" Les personnes présentes", footer_start)
+HTML = (HTML[:footer_start]
+        + f"{len(DATA['records'])} fiches locales, dont {people_count} personnes et "
+          f"{hotel_record_count} fiches d’établissement ; {local_memberships} inscriptions "
+          f"locales issues des quatre campagnes. Les listes sources comptent "
+          f"{source_memberships} inscriptions au total, dont "
+          f"{source_memberships - local_memberships} hors de ce périmètre."
+        + HTML[footer_end:])
 embedded = json.dumps(DATA, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 trip_embedded = json.dumps(TRIP, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 (ROOT / "cote_azur_2026.html").write_text(HTML.replace("__CSS__", CSS).replace("__DATA__", embedded).replace("__TRIP__", trip_embedded), encoding="utf-8")

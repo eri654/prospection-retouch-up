@@ -1,15 +1,15 @@
 {
-  "observedAt": "2026-09-18T14:57:11.7212051Z",
+  "observedAt": "2026-09-18T16:12:49.9113434Z",
   "campaigns": [
     {
       "key": "nice",
       "label": "Nice",
-      "memberships": 62
+      "memberships": 71
     },
     {
       "key": "cannes",
       "label": "Cannes",
-      "memberships": 47
+      "memberships": 48
     },
     {
       "key": "antibes",
@@ -24,7 +24,7 @@
   ],
   "scope": {
     "label": "Nice, Cannes, Antibes et communes voisines des hôtels du parcours",
-    "sourceRecords": 156,
+    "sourceRecords": 166,
     "excludedRecords": 32
   },
   "hotels": {
@@ -836,6 +836,24 @@
       "hotelNames": []
     },
     {
+      "key": "e68788a97509",
+      "kind": "person",
+      "name": "Alexandre Benoit",
+      "role": "Directeur général",
+      "association": "Boscolo Nice Hôtel & Spa",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://fr.linkedin.com/posts/boscolocollection_nice-boscolonice-hospitality-activity-7500103900885315584-CDts",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/alexandre-benoit-hospitality",
+      "hubspotId": "",
+      "hotelNames": [
+        "Boscolo Nice Hôtel & Spa"
+      ]
+    },
+    {
       "key": "8dc5bc953730",
       "kind": "person",
       "name": "Maxime SALEMBIER",
@@ -909,6 +927,24 @@
       "hubspotId": "237472914782",
       "hotelNames": [
         "Hôtel Aston La Scala"
+      ]
+    },
+    {
+      "key": "ee9056b022da",
+      "kind": "person",
+      "name": "Antoine Attia",
+      "role": "Président et dirigeant",
+      "association": "Hôtel Beau Rivage",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://fr.linkedin.com/posts/tourmag-com_antoine-attia-beau-rivage-t%C3%A9moigne-de-l%C3%A9tat-activity-7289551250415583232-AmkC",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/antoine-attia-873b5430",
+      "hubspotId": "",
+      "hotelNames": [
+        "Hôtel Beau Rivage"
       ]
     },
     {
@@ -1006,6 +1042,24 @@
       ]
     },
     {
+      "key": "6e70b3af65fd",
+      "kind": "person",
+      "name": "Christine Stenger",
+      "role": "Directrice générale",
+      "association": "Hôtel Nice Excelsior",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://www.tripadvisor.com/Hotel_Review-g187234-d219974-Reviews-Hotel_Nice_Excelsior_by_HappyCulture-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot.html",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/christine-stenger-5a8677235",
+      "hubspotId": "",
+      "hotelNames": [
+        "Hôtel Nice Excelsior"
+      ]
+    },
+    {
       "key": "ac47983ae3e6",
       "kind": "person",
       "name": "patrice M.",
@@ -1098,6 +1152,24 @@
       ]
     },
     {
+      "key": "a8971247fc51",
+      "kind": "person",
+      "name": "Stephanie Carre",
+      "role": "Directrice générale",
+      "association": "ibis Styles Nice Centre Gare",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://fr.linkedin.com/posts/stephanie-carre-079b99138_fi%C3%A8re-et-inspir%C3%A9e-par-mon-%C3%A9quipe-activity-7393977696038367232-fyTY",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/stephanie-carre-079b99138",
+      "hubspotId": "",
+      "hotelNames": [
+        "ibis Styles Nice Centre Gare"
+      ]
+    },
+    {
       "key": "f186cc7ff505",
       "kind": "person",
       "name": "Sandra Urcher",
@@ -1174,6 +1246,24 @@
       ]
     },
     {
+      "key": "4ceff07b7089",
+      "kind": "person",
+      "name": "Yannick Bouchard",
+      "role": "Direction de l'hôtel",
+      "association": "Mercure Villeneuve-Loubet Plage",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://all.accor.com/hotel/A9A2/index.fr.shtml",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/yannick-bouchard-9a0688a0",
+      "hubspotId": "",
+      "hotelNames": [
+        "Mercure Villeneuve-Loubet Plage"
+      ]
+    },
+    {
       "key": "ca040d67d147",
       "kind": "person",
       "name": "Jérôme Castelain",
@@ -1189,6 +1279,24 @@
       "hubspotId": "",
       "hotelNames": [
         "Moxy Nice"
+      ]
+    },
+    {
+      "key": "33cac74a401f",
+      "kind": "person",
+      "name": "Anna Kostanyan",
+      "role": "Directrice générale",
+      "association": "NH Nice",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://fr.linkedin.com/posts/sebastien-oger_jai-r%C3%A9cemment-eu-le-plaisir-d%C3%A9changer-avec-activity-7455579397572493312-A9Ty",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/anna-kostanyan-7aa39a14",
+      "hubspotId": "",
+      "hotelNames": [
+        "NH Nice"
       ]
     },
     {
@@ -1243,6 +1351,24 @@
       "hubspotId": "",
       "hotelNames": [
         "Novotel Nice Aéroport Cap 3000"
+      ]
+    },
+    {
+      "key": "e783a6ac7a09",
+      "kind": "person",
+      "name": "David Bousselet",
+      "role": "Directeur",
+      "association": "Novotel Nice Arénas Aéroport",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://all.accor.com/hotel/0478/index.pt-br.shtml",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/david-bousselet-0b750a67",
+      "hubspotId": "",
+      "hotelNames": [
+        "Novotel Nice Arénas Aéroport"
       ]
     },
     {
@@ -1334,6 +1460,42 @@
       "hubspotId": "208241810766",
       "hotelNames": [
         "Radisson Hotel Nice Airport"
+      ]
+    },
+    {
+      "key": "1a41802b83b9",
+      "kind": "person",
+      "name": "Franck Giacometti",
+      "role": "Directeur général",
+      "association": "Sheraton Nice Airport",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://www.nicematin.com/societe/vie-locale/l-exploitant-du-sheraton-de-nice-en-redressement-judiciaire-aucun-impact-sur-l-hotel-selon-le-directeur-905060",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/franck-giacometti-573b531a",
+      "hubspotId": "",
+      "hotelNames": [
+        "Sheraton Nice Airport"
+      ]
+    },
+    {
+      "key": "83b09a439021",
+      "kind": "person",
+      "name": "Michel Tschann",
+      "role": "Président de SHIN Hotels",
+      "association": "Splendid Hotel & Spa Nice",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://www.splendid-nice.com/mentions-legales/",
+      "outsideZone": false,
+      "origins": [
+        "nice"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/michel-tschann-201715/fr",
+      "hubspotId": "",
+      "hotelNames": [
+        "Splendid Hotel & Spa Nice"
       ]
     },
     {
@@ -1849,6 +2011,24 @@
       ]
     },
     {
+      "key": "d576e050cee6",
+      "kind": "person",
+      "name": "Carla Costa",
+      "role": "Directrice",
+      "association": "ibis Cannes Plage La Bocca",
+      "associationLabel": "Direction vérifiée · campagne locale en pause",
+      "associationSource": "https://all.accor.com/hotel/1170/index.fr.shtml",
+      "outsideZone": false,
+      "origins": [
+        "cannes"
+      ],
+      "linkedin": "https://fr.linkedin.com/in/c-costa8",
+      "hubspotId": "",
+      "hotelNames": [
+        "ibis Cannes Plage La Bocca"
+      ]
+    },
+    {
       "key": "1d0c4770f3f1",
       "kind": "person",
       "name": "Amina Aleksandrowicz",
@@ -2347,18 +2527,18 @@
       "key": "7abdab813a28",
       "kind": "person",
       "name": "Francesco Stilla",
-      "role": "Directeur d'exploitation",
-      "association": "Holiday Inn Nice Centre",
-      "associationLabel": "Source LinkedIn ou site officiel · 18/09/2026",
-      "associationSource": "https://fr.linkedin.com/posts/francesco-stilla-170685_teamslv-activity-7289689245676400641-rgO0",
+      "role": "Directeur général",
+      "association": "Holiday Inn Nice Port Saint Laurent",
+      "associationLabel": "Direction vérifiée · déjà dans la campagne générique",
+      "associationSource": "https://fr.linkedin.com/posts/holiday-inn-saint-laurent-du-var_engagement-collaborateurs-cotedazurfrance-activity-7399776063834308608-_PxJ",
       "outsideZone": false,
       "origins": [
         "hotels"
       ],
-      "linkedin": "",
+      "linkedin": "https://fr.linkedin.com/in/francesco-stilla-170685",
       "hubspotId": "143701",
       "hotelNames": [
-        "Holiday Inn Nice Centre"
+        "Holiday Inn Nice Port Saint Laurent"
       ]
     },
     {
@@ -2953,6 +3133,86 @@
       "hubspotId": "",
       "hotelNames": [
         "Villa Miraé Cap d’Antibes"
+      ]
+    },
+    {
+      "key": "6c11fdbc6f08",
+      "kind": "person",
+      "name": "Eric Talou",
+      "role": "Directeur général",
+      "association": "Crowne Plaza Nice Grand Arenas",
+      "associationLabel": "Déjà dans une autre campagne en pause · rattachement local à contrôler",
+      "associationSource": "https://fr.linkedin.com/posts/crowneplazanice_soir%C3%A9edupersonnel-espritdequipe-fiert%C3%A9-activity-7420042634112462848-EPWa",
+      "outsideZone": false,
+      "origins": [],
+      "linkedin": "https://fr.linkedin.com/in/eric-talou-2b4b771a",
+      "hubspotId": "116551",
+      "hotelNames": [
+        "Crowne Plaza Nice Grand Arenas"
+      ]
+    },
+    {
+      "key": "5ea091500f86",
+      "kind": "person",
+      "name": "Cathy Horville",
+      "role": "Directrice",
+      "association": "Hôtel Le Soleia",
+      "associationLabel": "Déjà dans une autre campagne en pause · rattachement local à contrôler",
+      "associationSource": "https://fr.linkedin.com/in/cathy-horville-62611365",
+      "outsideZone": false,
+      "origins": [],
+      "linkedin": "https://fr.linkedin.com/in/cathy-horville-62611365",
+      "hubspotId": "114244672812",
+      "hotelNames": [
+        "Hôtel Le Soleia"
+      ]
+    },
+    {
+      "key": "3c092add1fb6",
+      "kind": "person",
+      "name": "Mazarine Vinci",
+      "role": "Direction de l'hôtel",
+      "association": "Novotel Antibes Sophia Antipolis",
+      "associationLabel": "Direction confirmée sur le site officiel · profil LinkedIn à vérifier",
+      "associationSource": "https://all.accor.com/hotel/0398/index.fr.shtml",
+      "outsideZone": false,
+      "origins": [],
+      "linkedin": "",
+      "hubspotId": "",
+      "hotelNames": [
+        "Novotel Antibes Sophia Antipolis"
+      ]
+    },
+    {
+      "key": "bf262ea3dc4d",
+      "kind": "person",
+      "name": "Jocelyne Faure",
+      "role": "Direction de l'hôtel",
+      "association": "ibis Styles Nice Cap 3000 Aéroport",
+      "associationLabel": "Direction confirmée sur le site officiel · profil LinkedIn à vérifier",
+      "associationSource": "https://all.accor.com/hotel/5489/index.fr.shtml",
+      "outsideZone": false,
+      "origins": [],
+      "linkedin": "",
+      "hubspotId": "",
+      "hotelNames": [
+        "ibis Styles Nice Cap 3000 Aéroport"
+      ]
+    },
+    {
+      "key": "64348daeae5d",
+      "kind": "person",
+      "name": "Eva Bini",
+      "role": "Directrice générale",
+      "association": "Holiday Inn Nice Centre",
+      "associationLabel": "Direction confirmée par l'hôtel sur LinkedIn · profil personnel à vérifier",
+      "associationSource": "https://fr.linkedin.com/posts/holidayinn-nice_holidayinn-nice-ihg-activity-7394433824215973890-uZex",
+      "outsideZone": false,
+      "origins": [],
+      "linkedin": "",
+      "hubspotId": "",
+      "hotelNames": [
+        "Holiday Inn Nice Centre"
       ]
     }
   ]
